@@ -1,1 +1,4 @@
 name: Krzysztof Begiedza
+encoding: utf-8
+# permalink: /blog/:year/:month/:day/:title
+permalink: /:title
