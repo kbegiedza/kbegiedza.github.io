@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Hello world
 date: 2020-06-11
 ---
