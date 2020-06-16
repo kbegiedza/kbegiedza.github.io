@@ -2,7 +2,7 @@
 layout: article
 title: Title of this post
 # How long this title can be? Should be pretty looong!
-sub-title: short description of this post to describe post content stuff
+sub-title: Short description of this post to describe post content stuff
 date: 2020-06-11
 title-image: /static/img/post-image.png
 ---

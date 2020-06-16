@@ -1,8 +1,14 @@
 html, body {
+    color: #e1e1e1;
     font-family: 'Roboto';
+
     background-size: cover;
     background-color: #0d1017;
     overflow-x: hidden;
+}
+
+.content h1, h2, h3 {
+    color: #e1e1e1 !important;
 }
 
 .content-title {
@@ -49,19 +55,34 @@ html, body {
     font-size: 1.25em;
 }
 
+.article-title-sub-text {
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
 .article-title-date {
+    font-size: 0.75em;
+    font-weight: 300;
 }
 
 .article-title-content {
     position: absolute;
     left: 1em;
     bottom: 3.5em;
-    color: #f7f7f2;
+    color: #e1e1e1;
 }
 
 @media (min-width: 768px) {
     .article-title-text {
         font-size: 2em;
+    }
+
+    .article-title-sub-text {
+        font-size: 1.25em;
+    }
+
+    .article-title-date {
+        font-size: 0.9em;
     }
 }
 
