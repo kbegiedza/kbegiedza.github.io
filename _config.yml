@@ -2,3 +2,6 @@ name: Krzysztof Begiedza
 encoding: utf-8
 # permalink: /blog/:year/:month/:day/:title
 permalink: /:title
+markdown: kramdown
+kramdown:
+    math_engine: katex
