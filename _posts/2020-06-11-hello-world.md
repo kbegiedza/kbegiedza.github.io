@@ -9,7 +9,17 @@ title-image: /static/img/post-image.png
 
 ## Jeden
 
-Bacon ipsum dolor amet pancetta corned beef sausage doner boudin turducken short ribs sirloin chicken. Turkey kielbasa jerky, salami flank tri-tip meatloaf tail cow sausage beef ribs chislic shoulder. Pancetta biltong alcatra, pig chuck bresaola swine leberkas pork loin cupim tenderloin brisket picanha tri-tip sirloin. Meatball venison meatloaf, biltong boudin ball tip ground round. Salami prosciutto tail sirloin. Pancetta corned beef sausage spare ribs cupim.
+Bacon ipsum dolor amet pancetta corned beef sausage doner boudin turducken short ribs sirloin chicken. Turkey kielbasa jerky, salami flank tri-tip meatloaf tail cow sausage beef ribs chislic shoulder. Pancetta biltong alcatra, pig chuck bresaola swine leberkas pork loin cupim tenderloin brisket picanha tri-tip sirloin. Meatball venison meatloaf, biltong boudin ball tip ground round. Salami prosciutto tail sirloin. Pancetta corned beef 
+sausage spare ribs cupim.
+
+```cpp
+int main()
+{
+    std::cout << "hello" std::endl;
+
+    return 0;
+}
+```
 
 ## Dwa
 
