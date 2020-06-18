@@ -13,11 +13,64 @@ Bacon ipsum dolor amet pancetta corned beef sausage doner boudin turducken short
 sausage spare ribs cupim.
 
 ```cpp
+#include <iostream>
+#include <vector>
+#include <map>
+#include <list>
+
+#include "test.h"
+
+class Test
+{
+};
+
+template <typename T>
+class Testowa
+{
+    public:
+        const T& Dej();
+};
+
 int main()
 {
-    std::cout << "hello" std::endl;
+    int x = 0;
+
+    std::ios_base::sync_with_stdio(0);
+
+    std::vector<Test*> l;
+
+    Test* t1 = new Test(1);
+    Test* t2 = new Test(2);
+
+
+    l.push_back(t1);
+    l.push_back(std::move(t2));
+
+    delete t1;
+    delete t2;
 
     return 0;
+}
+```
+
+## A tu C płotek
+
+```csharp
+public class StringBuilderWrapper
+{
+    public StringBuilderWrapper(StringBuilder sb) { StringBuilder = sb; }
+    public StringBuilder StringBuilder { get; private set; }
+
+    public static implicit operator StringBuilderWrapper(StringBuilder sb)
+    {
+        return new StringBuilderWrapper(sb);
+    }
+
+    public static StringBuilderWrapper operator +(StringBuilderWrapper sbw, string s)
+    {
+        sbw.StringBuilder.Append(s);
+        return sbw;
+    }
 }
 ```
 
