@@ -52,24 +52,29 @@ int main()
     return 0;
 }
 ```
+{:data-lang="cpp"}
 
 ## A tu C płotek
 
-```csharp
-public class StringBuilderWrapper
+```c#
+namespace Testowy.Nejmspejs
 {
-    public StringBuilderWrapper(StringBuilder sb) { StringBuilder = sb; }
-    public StringBuilder StringBuilder { get; private set; }
-
-    public static implicit operator StringBuilderWrapper(StringBuilder sb)
+    public class StringBuilderWrapper
     {
-        return new StringBuilderWrapper(sb);
-    }
+        public StringBuilderWrapper(StringBuilder sb) { StringBuilder = sb; }
+        public StringBuilder StringBuilder { get; private set; }
 
-    public static StringBuilderWrapper operator +(StringBuilderWrapper sbw, string s)
-    {
-        sbw.StringBuilder.Append(s);
-        return sbw;
+        public static implicit operator StringBuilderWrapper(StringBuilder sb)
+        {
+            var str = "123\n[a-z]";
+            return new StringBuilderWrapper(sb);
+        }
+
+        public static StringBuilderWrapper operator +(StringBuilderWrapper sbw, string s)
+        {
+            sbw.StringBuilder.Append(s);
+            return sbw;
+        }
     }
 }
 ```
