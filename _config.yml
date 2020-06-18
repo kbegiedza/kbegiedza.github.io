@@ -1,4 +1,16 @@
 name: Krzysztof Begiedza
 encoding: utf-8
+
 # permalink: /blog/:year/:month/:day/:title
 permalink: /:title
+
+# Markdown stuff
+markdown: kramdown
+highlighter: rouge
+kramdown:
+    input: GFM
+    math_engine: mathjax
+    syntax_highlighter: rouge
+#     syntax_highlighter_opts:
+#         block:
+#             line_numbers: true
