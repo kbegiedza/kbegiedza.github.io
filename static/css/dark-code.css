@@ -12,13 +12,16 @@
 }
 
 pre.highlight {
-    padding-top: 1em;
+    padding: .5em 1em;
 }
 
 pre > code:before {
-    content: attr(data-lang);
+    opacity: 0.5;
     display: block;
+    font-size: 1.2em;
     text-align: right;
+    text-transform: capitalize;
+    content: attr(data-lang);
 }
 
 .highlight .c { color: #6A9955 } /* Comment */
