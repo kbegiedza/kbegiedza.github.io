@@ -91,3 +91,37 @@ html, body {
         font-size: 2.5em;
     }
 }
+
+/*  */
+
+::-webkit-scrollbar {
+  width: .75em;
+  height: .75em;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-track:active {
+    background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
