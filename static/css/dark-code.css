@@ -19,9 +19,8 @@ pre > code:before {
     opacity: 0.5;
     display: block;
     font-size: 1.1em;
-    text-align: right;
     text-transform: capitalize;
-    content: attr(data-lang);
+    content: " "attr(data-lang);
 }
 
 .highlight .c { color: #6A9955 } /* Comment */
