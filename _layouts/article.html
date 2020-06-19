@@ -2,14 +2,16 @@
 layout: default
 ---
 <div class="hero article-title">
-    <img class="article-title-image"
-        src="{{ page.title-image }}">
+    <img class="article-title-image" src="{{ page.title-image }}">
     <div class="article-title-content">
-        <h1 class="article-title-text">{{ page.title }}</h1>
+        <h1 class="article-title-text">
+            {{ page.title }}</h1>
         <p class="article-title-sub-text">
-            {{ page.sub-title }}</p>
+            {{ page.sub-title }}
+        </p>
         <p class="article-title-date">
-            {{ page.date | date_to_string }}</p>
+            {{ page.date | date_to_string }}
+        </p>
     </div>
 </div>
 <div class="content">

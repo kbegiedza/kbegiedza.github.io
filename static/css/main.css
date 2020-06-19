@@ -92,8 +92,6 @@ html, body {
     }
 }
 
-/*  */
-
 ::-webkit-scrollbar {
   width: .75em;
   height: .75em;
@@ -124,4 +122,12 @@ html, body {
 }
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+.comments {
+    padding-top: 2em;
+}
+
+.comments-header {
+    word-spacing: .2em;
 }
