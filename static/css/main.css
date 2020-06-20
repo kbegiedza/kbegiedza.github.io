@@ -124,6 +124,25 @@ html, body {
   background: transparent;
 }
 
+.mail-list {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.mail-list-text {
+    font-size: 1.5em;
+}
+
+.mail-list-input {
+    padding: 5px;
+}
+
+.hero-mail-list {
+    background: #14171c;
+    border-radius: 4px;
+    border: 1px solid #1d1f21;
+}
+
 .comments {
     padding-top: 2em;
 }

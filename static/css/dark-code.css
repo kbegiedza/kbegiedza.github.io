@@ -4,8 +4,9 @@
 }
 
 .highlight, .highlight pre, .highlight .hll {
-    background: rgba(30, 30, 30, 0.3);
+    background: #14171c;
     border-radius: 4px;
+    border: 1px solid #1d1f21;
     color: #D4D4D4;
     font-family: monospace, monospace;
     font-size: 1em;
