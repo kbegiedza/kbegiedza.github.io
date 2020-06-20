@@ -28,7 +28,7 @@ html, body {
 .debug-column {
     padding: 0.75rem;
     border-radius: 1rem;
-    background-color: #ce9859;
+    background-color: #CB9352;
 }
 
 @media (max-width: 767px) {
@@ -124,11 +124,6 @@ html, body {
   background: transparent;
 }
 
-.mail-list {
-    padding-top: 2em;
-    padding-bottom: 1em;
-}
-
 .mail-list-text {
     font-size: 1.5em;
 }
@@ -137,7 +132,9 @@ html, body {
     padding: 5px;
 }
 
-.hero-mail-list {
+.mail-list {
+    margin-top: 2em;
+    margin-bottom: 1em;
     background: #14171c;
     border-radius: 4px;
     border: 1px solid #1d1f21;
@@ -149,4 +146,25 @@ html, body {
 
 .comments-header {
     word-spacing: .2em;
+}
+
+.is-secondary,.is-secondary:focus {
+    transition: ease .5s;
+
+    color: #e1e1e1;
+    background: #CB9352;
+    border: 1px solid #CB9352;
+}
+
+.is-secondary:hover
+{
+    color: #e1e1e1;
+    background: #C78943;
+    border: 1px solid #C78943;
+}
+
+.is-secondary:active {
+    color: #e1e1e1;
+    background: #C78943;
+    border: 1px solid #14171c;
 }

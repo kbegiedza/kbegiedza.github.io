@@ -1,2 +1,2 @@
 jekyll build
-jekyll serve
+jekyll serve --incremental --watch
