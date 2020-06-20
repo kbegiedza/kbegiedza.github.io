@@ -7,6 +7,19 @@ html, body {
     overflow-x: hidden;
 }
 
+
+a:link {
+    color: #CB9352;
+}
+
+a:visited {
+    color: #CB9352;
+}
+
+a:hover {
+    color: #C78943;
+}
+
 .content h1, h2, h3 {
     color: #e1e1e1 !important;
 }

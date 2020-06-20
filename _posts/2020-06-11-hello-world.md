@@ -90,10 +90,29 @@ $$e^{ix} = \cos{x} + i\sin{x}$$
 
 ### Trzy
 
-Turducken brisket pig chuck. Strip steak pork loin burgdoggen, tri-tip brisket venison turkey pork alcatra ham hock ground round. Pork ground round alcatra filet mignon strip steak hamburger bacon pork belly cow landjaeger. Sirloin salami brisket bresaola jowl kevin porchetta chicken. Ribeye turkey tri-tip sausage, buffalo salami doner leberkas alcatra cow frankfurter ground round sirloin shoulder chislic.
+Turducken brisket pig chuck<sup>[<a href="#ref_1">1</a>]</sup>. Strip steak pork loin burgdoggen, tri-tip brisket venison turkey pork alcatra ham hock ground round. Pork ground round alcatra filet mignon strip steak hamburger bacon pork belly cow landjaeger. Sirloin salami brisket bresaola jowl kevin porchetta chicken. Ribeye turkey tri-tip sausage, buffalo salami doner leberkas alcatra cow frankfurter ground round sirloin shoulder chislic.
 
 Prosciutto leberkas pig, pork loin pastrami turkey bacon burgdoggen frankfurter fatback cupim ham shoulder corned beef ball tip. Beef ham sausage tenderloin, bacon swine turkey. Beef swine capicola doner pastrami burgdoggen strip steak pork chop chicken. Ground round frankfurter andouille boudin, alcatra meatloaf sirloin capicola corned beef t-bone pork belly.
 
 Strip steak beef hamburger flank pastrami shank. Doner turducken chicken tenderloin biltong chuck pork prosciutto salami jowl meatball brisket alcatra shankle. Chuck tenderloin pig fatback, spare ribs ham hock shoulder jerky chislic hamburger beef ham. Biltong ball tip venison, kevin fatback strip steak picanha landjaeger tail meatball pork belly buffalo. Swine sirloin bresaola, flank pork loin hamburger porchetta. Beef ribs flank pig, spare ribs shankle ground round pork chop shoulder picanha short loin. Brisket tri-tip pork loin beef salami flank, buffalo chislic pastrami tail capicola sirloin.
 
 Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!
+
+### Aditional Resources
+
+There were a few things I didn't cover in this post as they would have been a beyond the scope of this post.
+You can read more about this stuff there:
+
+*   [Polska Wikipedia](https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna)
+*   [Lorem Ipsum](#)
+*   [Bacon Ipsum](https://baconipsum.com/)
+
+{::options parse_block_html="true" /}
+<div class="references">
+
+### References
+
+1.  [Title of article, book or other medium](https://kbegiedza.eu/), Krzysztof Begiedza, 2020
+{:id="ref_1"}
+
+</div>
