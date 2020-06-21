@@ -110,4 +110,4 @@ You can read more about this stuff there:
 ### References
 
 1.  {:id="ref_1"} Begiedza K. [Title of article, book or other medium](https://kbegiedza.eu/). 2020
-2.  {:id="ref_2"} Laaksonen DE, Nuutinen J, Lahtinen T, Rissanen A, Niskanen LK. Changes in abdominal subcutaneous fat water content with rapid weight loss and long-term weight maintenance in abdominally obese men and women. *International Journal of Obesity*. 2003
+2.  {:id="ref_2"} Laaksonen DE, Nuutinen J, Lahtinen T, Rissanen A, Niskanen LK. [Changes in abdominal subcutaneous fat water content with rapid weight loss and long-term weight maintenance in abdominally obese men and women](https://www.google.com/). *International Journal of Obesity*. 2003

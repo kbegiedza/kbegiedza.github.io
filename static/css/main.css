@@ -7,7 +7,6 @@ html, body {
     overflow-x: hidden;
 }
 
-
 a, a:link, a:visited {
     color: #CB9352;
 }
@@ -27,11 +26,6 @@ a:hover {
 .content-date {
     font-size: 0.9em;
     margin-bottom: 1em;
-}
-
-.content-column {
-    padding: 0.75rem;
-    border-radius: 1rem;
 }
 
 .debug-column {
@@ -177,4 +171,18 @@ a:hover {
     color: #e1e1e1;
     background: #C78943;
     border: 1px solid #14171c;
+}
+
+/* Side */
+
+.side {
+    padding: 0em 1em;
+    border-left: 5px solid #CB9352;
+}
+
+@media screen and (max-width: 767px), print {
+    .columns
+    {
+        padding: 1em;
+    }
 }
