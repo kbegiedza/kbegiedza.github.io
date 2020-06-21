@@ -84,7 +84,7 @@ Shoulder tongue brisket tenderloin rump pork chop ribeye biltong frankfurter leb
 
 Here, have some $$\pi$$.
 
-The greatest equation known to man is: 
+The greatest equation known to man is:
 
 $$e^{ix} = \cos{x} + i\sin{x}$$
 
@@ -107,12 +107,7 @@ You can read more about this stuff there:
 *   [Lorem Ipsum](#)
 *   [Bacon Ipsum](https://baconipsum.com/)
 
-{::options parse_block_html="true" /}
-<div class="references">
-
 ### References
 
-1.  [Title of article, book or other medium](https://kbegiedza.eu/), Krzysztof Begiedza, 2020
-{:id="ref_1"}
-
-</div>
+1.  {:id="ref_1"} Begiedza K. [Title of article, book or other medium](https://kbegiedza.eu/). 2020
+2.  {:id="ref_2"} Laaksonen DE, Nuutinen J, Lahtinen T, Rissanen A, Niskanen LK. Changes in abdominal subcutaneous fat water content with rapid weight loss and long-term weight maintenance in abdominally obese men and women. *International Journal of Obesity*. 2003
