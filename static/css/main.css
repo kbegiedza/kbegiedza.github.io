@@ -181,8 +181,18 @@ a:hover {
 }
 
 @media screen and (max-width: 767px), print {
-    .columns
-    {
+    .columns {
         padding: 1em;
     }
+}
+
+/* Side.About */
+
+.side-about-img {
+    float: right;
+    min-width: 100px;
+    max-width: 25%;
+    height: auto;
+    margin-left: 12px;
+    margin-bottom: 5px;
 }
