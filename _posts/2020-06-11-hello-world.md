@@ -5,6 +5,7 @@ title: Title of this post
 sub-title: Short description of this post to describe post content stuff
 date: 2020-06-11
 title-image: /static/img/post-image.png
+category: [Multi, Tag]
 ---
 
 ## Jeden
