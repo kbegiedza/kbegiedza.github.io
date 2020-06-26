@@ -1,11 +1,17 @@
 <div class="content">
     <div class="side-panel side-about">
         <img class="side-about-img" src="/static/img/kazik.jpg"></img>
-        Najmłodszy syn Władysława I Łokietka i Jadwigi Bolesławówny, król Polski w latach 1333–1370, ostatni monarcha z dynastii Piastów na tronie polskim.
+        <p class="side-about-text">
+            Hej! Najmłodszy syn Władysława I Łokietka i Jadwigi Bolesławówny, król Polski w latach 1333–1370, ostatni
+            monarcha z
+            dynastii Piastów na tronie polskim.
+        </p>
     </div>
 
     <div class="side-panel">
-        <h3 class="side-panel-header">Categories</h3>
+        <a href="/categories">
+            <h3 class="side-panel-header">Categories</h3>
+        </a>
         <p>
             {% for category in site.categories %}
             {% capture category_name %}{{ category | first }}{% endcapture %}

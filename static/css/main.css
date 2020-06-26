@@ -189,13 +189,59 @@ a:hover {
 
 /* Side.About */
 
-.side-about-img {
-    float: right;
-    min-width: 100px;
-    max-width: 25%;
-    height: auto;
-    margin-left: 12px;
-    margin-bottom: 5px;
+.side-about{
+        display: block;
+}
+
+@media screen and (max-width: 767px) {
+    .side-about{
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .side-about{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .side-about-img {
+        float: right;
+        clear: right;
+        width: 80px;
+        height: auto;
+        margin-left: 7px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .side-about-img {
+        width: 80px;
+        height: auto;
+        margin-right: 7px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .side-about-img {
+        float: right;
+        clear: right;
+        width: 80px;
+        height: auto;
+        margin-left: 7px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .side-about-img {
+        width: 125px;
+        margin-left: 7px;
+        margin-bottom: 5px;
+    }
 }
 
 .side-panel-header {
