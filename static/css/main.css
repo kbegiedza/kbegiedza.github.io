@@ -7,6 +7,19 @@ html, body {
     overflow-x: hidden;
 }
 
+.navbar {
+    background-color: #0d1017;
+}
+
+a.navbar-item:hover {
+    color: #C78943;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    background-color: #0d1017;
+}
+
 a, a:link, a:visited {
     color: #CB9352;
 }
