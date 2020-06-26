@@ -220,6 +220,7 @@ a:hover {
     .side-about-img {
         width: 80px;
         height: auto;
+        margin-left: 0px;
         margin-right: 7px;
         margin-bottom: 5px;
     }
@@ -231,6 +232,7 @@ a:hover {
         clear: right;
         width: 80px;
         height: auto;
+        margin-left: 0px;
         margin-left: 7px;
         margin-bottom: 5px;
     }
@@ -239,6 +241,7 @@ a:hover {
 @media screen and (min-width: 1408px) {
     .side-about-img {
         width: 125px;
+        margin-left: 0px;
         margin-left: 7px;
         margin-bottom: 5px;
     }

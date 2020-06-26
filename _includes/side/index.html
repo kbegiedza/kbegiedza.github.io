@@ -15,8 +15,9 @@
         <p>
             {% for category in site.categories %}
             {% capture category_name %}{{ category | first }}{% endcapture %}
-            {{ category_name }}
-            <a href="#"></a><br>
+            <a href="/categories#{{ category_name | slugize }}">
+                {{ category_name }}
+            </a><br>
             {% endfor %}
         </p>
     </div>
