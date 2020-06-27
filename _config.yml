@@ -10,3 +10,12 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
     math_engine: mathjax
+
+collections_dir: tutorials
+collections:
+    zero:
+        output: true
+        permalink: /:name
+    one:
+        output: true
+        permalink: /:name
