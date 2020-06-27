@@ -15,7 +15,7 @@ collections_dir: tutorials
 collections:
     zero:
         output: true
-        permalink: /:name
+        permalink: /:collection/:name
     one:
         output: true
-        permalink: /:name
+        permalink: /:collection/:name

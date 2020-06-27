@@ -16,6 +16,11 @@ a.navbar-item:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
+a.navbar-item:focus {
+    color: #C78943;
+    background: rgba(0, 0, 0, 0.3);
+}
+
 .footer {
     background-color: #0d1017;
 }
@@ -274,6 +279,10 @@ a:hover {
         margin-left: 7px;
         margin-bottom: 5px;
     }
+}
+
+.accent-text {
+    color: #CB9352 !important;
 }
 
 .side-panel-header {
