@@ -3,6 +3,34 @@ layout: default
 title: Test
 ---
 
-<div>
-    <h1>iks de</h1>
-</div>
+{% assign ps = site.collections %}
+{% assign all = site.collections | first %}
+<p>
+    {{ ps }}
+
+    {% assign sortedAll = all | sort "date" %}
+
+    {% for i in sortedAll %}
+    {{ i.title }}
+    {% endfor%}
+</p>
+
+<br>
+<hr>
+<p>+++</p>
+
+{% for collection in site.collections %}
+{% assign name = collection.label %}
+
+{% for post in site.[name] %}
+<ul>
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+</ul>
+{% endfor %}
+{% endfor %}
+
+<p>---</p>
+
+{% for post in site.posts %}
+<p> {{ post.url }} </p>
+{% endfor %}

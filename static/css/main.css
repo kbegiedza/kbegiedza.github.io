@@ -7,17 +7,17 @@ html, body {
     overflow-x: hidden;
 }
 
-.navbar {
+.navbar, .navbar-menu {
     background-color: #0d1017;
 }
 
 a.navbar-item:hover {
-    color: #C78943;
+    color: #d5a874;
     background: rgba(0, 0, 0, 0.3);
 }
 
 a.navbar-item:focus {
-    color: #C78943;
+    color: #d5a874;
     background: rgba(0, 0, 0, 0.3);
 }
 
@@ -30,7 +30,7 @@ a, a:link, a:visited {
 }
 
 a:hover {
-    color: #C78943;
+    color: #d5a874;
 }
 
 .content h1, h2, h3 {
@@ -181,13 +181,13 @@ a:hover {
 .is-secondary:hover
 {
     color: #e1e1e1;
-    background: #C78943;
-    border: 1px solid #C78943;
+    background: #d5a874;
+    border: 1px solid #d5a874;
 }
 
 .is-secondary:active {
     color: #e1e1e1;
-    background: #C78943;
+    background: #d5a874;
     border: 1px solid #14171c;
 }
 
