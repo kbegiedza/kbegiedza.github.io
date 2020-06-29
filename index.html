@@ -3,17 +3,38 @@ layout: default
 title: Test
 ---
 
-{% assign ps = site.collections %}
-{% assign all = site.collections | first %}
-<p>
-    {{ ps }}
+<div>
+    {% capture all_posts %}
+    {% for collection in site.collections %}
+    {% for post in collection.docs %}
+    {{ post.title }}|{{post.date}}|{{post.url}}
+    {% if forloop.last == false %}::{% endif %}
+    {% endfor %}
+    {% if forloop.last == false %}::{% endif %}
+    {% endfor %}
+    {% endcapture %}
 
-    {% assign sortedAll = all | sort "date" %}
+    {% assign posts_array = all_posts | split: '::'%}
+    {% assign sorted = posts_array | sort: "date" %}
 
-    {% for i in sortedAll %}
-    {{ i.title }}
-    {% endfor%}
-</p>
+    <div class="notification is-warning">
+        {{ sorted | inspect }}
+    </div>
+
+    <ul>
+        {% for post in sorted %}
+        <li>
+            {% assign post_vals = post | split: '|' %}
+
+            {% assign post_name = post_vals[0] %}
+            {% assign post_date = post_vals[1] %}
+            {% assign post_url = post_vals[2] %}
+
+            <a href="{{ post_url }}"> {{ post_name }} | {{ post_date }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
 <br>
 <hr>
@@ -22,7 +43,7 @@ title: Test
 {% for collection in site.collections %}
 {% assign name = collection.label %}
 
-{% for post in site.[name] %}
+{% for post in site[name] %}
 <ul>
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 </ul>
