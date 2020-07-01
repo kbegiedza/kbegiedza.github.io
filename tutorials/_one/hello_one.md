@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: tutorial
 title: Hello one
 date: 2020-06-11
 ---

@@ -1,0 +1,12 @@
+---
+layout: article
+---
+
+{{ content }}
+
+<h2>Wpisy z tej serii: </h2>
+<ol>
+    {% for p in site[page.collection] | sort: "date" %}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+    {% endfor %}
+</ol>
