@@ -10,6 +10,15 @@ title: Test
     <a href="{{ post.url }}">
         <img class="article-title-image" src="{{ post.title-image }}">
         <div class="article-title-content">
+            <span class="is-pulled-right">
+                {% for category in post.category %}
+                {{ category}}
+                {% if forloop.last == false %}
+                |
+                {% endif %}
+                {% endfor %}
+            </span>
+
             <h1 class="article-title-text">
                 {{ post.title }}</h1>
             <p class="article-title-sub-text">
