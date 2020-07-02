@@ -211,7 +211,7 @@ a:hover {
 
 .side-panel {
     margin-bottom: 2em;
-    padding: 0em 1em;
+    padding: 0.2em 1em 0.2em;
     border-left: 5px solid #CB9352;
 }
 
@@ -287,4 +287,9 @@ a:hover {
 
 .side-panel-header {
     color: #CB9352 !important;
+}
+
+a.is-social {
+    text-decoration: none;
+    color: #e1e1e1;
 }
