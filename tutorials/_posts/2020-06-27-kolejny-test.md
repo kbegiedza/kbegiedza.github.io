@@ -3,8 +3,8 @@ layout: article
 title: Kolejny Test
 sub-title: Short description of this post to describe post content stuff
 date: 2020-06-27
-title-image: /static/img/post-image.png
-category: Test
+title-image: /static/img/placeholder0.png
+category: Kategoria
 ---
 
 Tutaj jest jakiś text

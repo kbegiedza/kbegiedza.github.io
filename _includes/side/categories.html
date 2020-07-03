@@ -1,7 +1,5 @@
 <div class="side-panel">
-    <a href="/categories">
-        <h3 class="side-panel-header">Categories</h3>
-    </a>
+    <h3 class="side-panel-header">Categories</h3>
     <p>
         {% for category in site.categories %}
         {% capture category_name %}{{ category | first }}{% endcapture %}
