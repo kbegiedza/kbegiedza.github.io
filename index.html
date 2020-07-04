@@ -51,19 +51,19 @@ title: Test
                 <article class="tile is-child">
                     <div class="home-tile">
                         <a href="{{post.url}}">
-                            <img class="article-title-image" src="{{ post.title-image }}">
-                            <div class="article-title-content">
-                                <h1 class="article-title-text">
+                            <img class="home-title-image" src="{{ post.title-image }}">
+                            <div class="home-title-content">
+                                <h1 class="home-title-text">
                                     {{ post.title }}</h1>
-                                <p class="article-title-sub-text">
+                                <p class="home-title-sub-text">
                                     {{ post.sub-title }}
                                 </p>
-                                <p class="article-title-date">
+                                <p class="home-title-date">
                                     {{ post.date | date_to_string }}
                                 </p>
                             </div>
-                            <div class="article-title-content-tags">
-                                <p class="article-title-sub-text">
+                            <div class="home-title-content-tags">
+                                <p class="home-title-sub-text">
                                     {% for category in post.category %}
                                     {{ category}}
                                     {% if forloop.last == false %}
