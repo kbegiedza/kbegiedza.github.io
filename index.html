@@ -14,8 +14,10 @@ title: Test
             <article class="tile is-child">
                 <div class="home-tile">
                     <a href="{{post.url}}">
-                        <img class="article-title-image" src="{{ post.title-image }}">
-                        <div class="article-title-content">
+                        <img class="home-title-image" src="{{ post.title-image }}">
+                        <div class="home-image-overlay">
+                        </div>
+                        <div class="article-title-content home-text">
                             <h1 class="article-title-text">
                                 {{ post.title }}</h1>
                             <p class="article-title-sub-text">
@@ -25,8 +27,8 @@ title: Test
                                 {{ post.date | date_to_string }}
                             </p>
                         </div>
-                        <div class="article-title-content-tags">
-                            <p class="article-title-sub-text">
+                        <div class="home-title-content-tags home-text">
+                            <p class="home-title-sub-text">
                                 {% for category in post.category %}
                                 {{ category}}
                                 {% if forloop.last == false %}
@@ -34,8 +36,6 @@ title: Test
                                 {% endif %}
                                 {% endfor %}
                             </p>
-                        </div>
-                        <div class="home-image-overlay">
                         </div>
                     </a>
                 </div>
@@ -52,7 +52,9 @@ title: Test
                     <div class="home-tile">
                         <a href="{{post.url}}">
                             <img class="home-title-image" src="{{ post.title-image }}">
-                            <div class="home-title-content">
+                            <div class="home-image-overlay">
+                            </div>
+                            <div class="home-title-content home-text">
                                 <h1 class="home-title-text">
                                     {{ post.title }}</h1>
                                 <p class="home-title-sub-text">
@@ -62,7 +64,7 @@ title: Test
                                     {{ post.date | date_to_string }}
                                 </p>
                             </div>
-                            <div class="home-title-content-tags">
+                            <div class="home-title-content-tags home-text">
                                 <p class="home-title-sub-text">
                                     {% for category in post.category %}
                                     {{ category}}
@@ -71,8 +73,6 @@ title: Test
                                     {% endif %}
                                     {% endfor %}
                                 </p>
-                            </div>
-                            <div class="home-image-overlay">
                             </div>
                         </a>
                     </div>

@@ -379,31 +379,33 @@ a.is-social {
 
 /* Home */
 
-.home-image-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.5;
-    background-color: black;
-    transition: ease 1s;
-}
+@media (hover: hover) {
+    .home-image-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+        background-color: black;
+        transition: ease 1s;
+    }
+    
+    .home-image-overlay:hover {
+        transition: ease 1s;
+        opacity: 0;
+    }
 
-.home-image-overlay:hover {
-    transition: ease 1s;
-    opacity: 0;
-}
-
-.home-small-image {
-    width: 100%;
-    height: auto;
-    background-color: black;
 }
 
 .home-tile {
     position: relative;
     display: inline-block;
+}
+
+.home-text {
+    opacity: 0.9;
+    color: #e1e1e1;
 }
