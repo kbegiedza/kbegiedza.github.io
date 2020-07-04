@@ -1,0 +1,18 @@
+---
+title: Tutorials
+layout: default
+---
+<div class="content">
+    <h1 class="accent-text">Tutoriale</h1>
+
+    {% for collection in site.collections %}
+    {% if collection.label != "posts" %}
+    <h2>{{ collection.label }}</h2>
+    <ul>
+        {% for item in site[collection.label] %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+</div>
