@@ -11,13 +11,17 @@ a, a:link, a:visited {
     color: #CB9352;
 }
 
-.navbar, .navbar-menu {
-    background-color: #0d1017;
+.navbar {
+    background-color: rgba(13, 16, 23, 0.96);
+}
+
+.navbar-menu {
+    background-color: transparent;
 }
 
 a.navbar-item {
     color: #e1e1e1;
-    font-size: 1.5em;
+    font-size: 1.25em;
     transition: ease 0.5s;
     text-decoration: none;
 }
@@ -29,6 +33,7 @@ a.navbar-item:focus {
 }
 
 a.navbar-item:active {
+    color: #CB9352;
     background-color: rgba(0,0,0,0.3);
 }
 
@@ -371,6 +376,19 @@ a:hover {
     }
 }
 
+@media (hover: hover) {
+    .side-about-img-overlay {
+        opacity: 0.4;
+        background-color: black;
+        transition: ease 1s;
+    }
+
+    .side-about-img-overlay:hover {
+        transition: ease 1s;
+        opacity: 0.9;
+    }
+}
+
 .accent-text {
     color: #CB9352 !important;
 }
@@ -408,9 +426,8 @@ a.is-social {
     
     .home-image-overlay:hover {
         transition: ease 1s;
-        opacity: 0.2;
+        opacity: 0.1;
     }
-
 }
 
 .home-tile {
