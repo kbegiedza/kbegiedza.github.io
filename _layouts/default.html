@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 
 <head>
+    {% include 3rdparty/analytics.html %}
+
     <title>{{ page.title }}</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="alternate" type="application/atom+xml" title="Blog - Krzysztof Begiedza" href="/feed.xml">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
