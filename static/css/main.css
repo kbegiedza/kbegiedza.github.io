@@ -377,6 +377,10 @@ a.is-social {
     color: #e1e1e1;
 }
 
+.side-panel.is-social {
+    padding-bottom: 0.5em;
+}
+
 /* Home */
 
 @media (hover: hover) {
@@ -388,14 +392,14 @@ a.is-social {
         right: 0;
         height: 100%;
         width: 100%;
-        opacity: 0.5;
+        opacity: 0.6;
         background-color: black;
         transition: ease 1s;
     }
     
     .home-image-overlay:hover {
         transition: ease 1s;
-        opacity: 0;
+        opacity: 0.2;
     }
 
 }
@@ -406,6 +410,6 @@ a.is-social {
 }
 
 .home-text {
-    opacity: 0.9;
+    opacity: 0.90;
     color: #e1e1e1;
 }
