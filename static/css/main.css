@@ -20,7 +20,7 @@ a, a:link, a:visited {
 }
 
 a.navbar-item {
-    color: #e1e1e1;
+    color: #CB9352;
     font-size: 1.25em;
     transition: ease 0.5s;
     text-decoration: none;
@@ -504,3 +504,8 @@ a.is-social {
     color: #f26522;
     background-color: #fff;
   }
+
+
+.is-subtext {
+    font-size: 0.9em;
+}
