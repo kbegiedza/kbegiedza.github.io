@@ -7,26 +7,33 @@ html, body {
     overflow-x: hidden;
 }
 
+a, a:link, a:visited {
+    color: #CB9352;
+}
+
 .navbar, .navbar-menu {
     background-color: #0d1017;
 }
 
-a.navbar-item:hover {
-    color: #d5a874;
-    background: rgba(0, 0, 0, 0.3);
+a.navbar-item {
+    color: #e1e1e1;
+    font-size: 1.5em;
+    transition: ease 0.5s;
+    text-decoration: none;
 }
 
+a.navbar-item:hover,
 a.navbar-item:focus {
     color: #d5a874;
-    background: rgba(0, 0, 0, 0.3);
+    background-color: #0d1017;
+}
+
+a.navbar-item:active {
+    background-color: rgba(0,0,0,0.3);
 }
 
 .footer {
     background-color: #0d1017;
-}
-
-a, a:link, a:visited {
-    color: #CB9352;
 }
 
 a:hover {
@@ -373,6 +380,8 @@ a:hover {
 }
 
 a.is-social {
+    margin: 0.1em;
+    margin-bottom: 0.4em;
     text-decoration: none;
     color: #e1e1e1;
 }
@@ -410,6 +419,71 @@ a.is-social {
 }
 
 .home-text {
-    opacity: 0.90;
+    opacity: 0.9;
     color: #e1e1e1;
 }
+
+.is-rss {
+    color: #fff;
+    background-color: #f26522;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-rss:focus,
+  .is-rss.focus {
+    color: #fff;
+    background-color: #ed560e;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-rss:hover {
+    color: #fff;
+    background-color: #ed560e;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-rss:active,
+  .is-rss.active,
+  .open > .dropdown-toggle.is-rss {
+    color: #fff;
+    background-color: #ed560e;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-rss:active:hover,
+  .is-rss.active:hover,
+  .open > .dropdown-toggle.is-rss:hover,
+  .is-rss:active:focus,
+  .is-rss.active:focus,
+  .open > .dropdown-toggle.is-rss:focus,
+  .is-rss:active.focus,
+  .is-rss.active.focus,
+  .open > .dropdown-toggle.is-rss.focus {
+    color: #fff;
+    background-color: #943307;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-rss:active,
+  .is-rss.active,
+  .open > .dropdown-toggle.is-rss {
+    background-image: none;
+  }
+  
+  .is-rss.disabled:hover,
+  .is-rss[disabled]:hover,
+  fieldset[disabled] .is-rss:hover,
+  .is-rss.disabled:focus,
+  .is-rss[disabled]:focus,
+  fieldset[disabled] .is-rss:focus,
+  .is-rss.disabled.focus,
+  .is-rss[disabled].focus,
+  fieldset[disabled] .is-rss.focus {
+    background-color: #f26522;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-rss .badge {
+    color: #f26522;
+    background-color: #fff;
+  }

@@ -1,4 +1,6 @@
-name: Krzysztof Begiedza
+author: Krzysztof Begiedza
+title: Blog - Krzysztof Begiedza
+description: Blog - Krzysztof Begiedza
 encoding: utf-8
 
 permalink: /:title
@@ -19,3 +21,6 @@ collections:
     one:
         output: true
         permalink: /:collection/:name
+
+plugins:
+    - jekyll-feed
