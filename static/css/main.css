@@ -509,3 +509,10 @@ a.is-social {
 .is-subtext {
     font-size: 0.9em;
 }
+
+@media screen and (min-width: 1216px) {
+    .button.is-social {
+        border-radius: 2px;
+        font-size: 0.8rem;
+    }
+}
