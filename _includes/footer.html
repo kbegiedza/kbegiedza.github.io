@@ -1,8 +1,16 @@
+{% assign start_date = '2020' %}
+{% assign current_date = 'now' | date: "%Y" %}
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
-            Made with ❤️ by <a href="https://kbegiedza.eu/">Krzysztof Begiedza</a>.
+            Handcrafted with ❤️ by <a href="https://kbegiedza.eu/">Krzysztof Begiedza</a>.
         </p>
-        <a class="is-subtext" href="/legal/privacy.html">Polityka prywatności</a>
+        <div class="is-subtext">
+            © {{ start_date }}
+            {% if start_date != current_date %}
+            - {{ current_date }}
+            {% endif %}
+            | <a href="/legal/privacy.html">Polityka prywatności</a>
+        </div>
     </div>
 </footer>
