@@ -24,7 +24,7 @@ div.navbar-brand > a.navbar-item {
 }
 
 div.navbar-brand > a.navbar-item:hover {
-    filter: grayscale(0.25);
+    filter: grayscale(0.35);
 }
 
 a.navbar-item {
