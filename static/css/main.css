@@ -8,6 +8,9 @@ html, body {
 }
 
 a, a:link, a:visited {
+    transition: color 0.5s ease;
+    text-decoration: none;
+
     color: #c78943;
 }
 
@@ -442,71 +445,6 @@ a.is-social {
     opacity: 0.9;
     color: #f2f2f2;
 }
-
-.is-rss {
-    color: #fff;
-    background-color: #f26522;
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .is-rss:focus,
-  .is-rss.focus {
-    color: #fff;
-    background-color: #ed560e;
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .is-rss:hover {
-    color: #fff;
-    background-color: #ed560e;
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .is-rss:active,
-  .is-rss.active,
-  .open > .dropdown-toggle.is-rss {
-    color: #fff;
-    background-color: #ed560e;
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .is-rss:active:hover,
-  .is-rss.active:hover,
-  .open > .dropdown-toggle.is-rss:hover,
-  .is-rss:active:focus,
-  .is-rss.active:focus,
-  .open > .dropdown-toggle.is-rss:focus,
-  .is-rss:active.focus,
-  .is-rss.active.focus,
-  .open > .dropdown-toggle.is-rss.focus {
-    color: #fff;
-    background-color: #943307;
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .is-rss:active,
-  .is-rss.active,
-  .open > .dropdown-toggle.is-rss {
-    background-image: none;
-  }
-  
-  .is-rss.disabled:hover,
-  .is-rss[disabled]:hover,
-  fieldset[disabled] .is-rss:hover,
-  .is-rss.disabled:focus,
-  .is-rss[disabled]:focus,
-  fieldset[disabled] .is-rss:focus,
-  .is-rss.disabled.focus,
-  .is-rss[disabled].focus,
-  fieldset[disabled] .is-rss.focus {
-    background-color: #f26522;
-    border-color: rgba(0, 0, 0, 0.2);
-  }
-  
-  .is-rss .badge {
-    color: #f26522;
-    background-color: #fff;
-  }
 
 .is-subtext {
     font-size: 0.9em;
