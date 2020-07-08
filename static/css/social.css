@@ -80,7 +80,7 @@ fieldset[disabled] .is-github.focus {
     height: 100%;
     background-image: linear-gradient(-135deg, #1206a3, #960692, #c7060b);
     border-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 2;
     opacity: 0;
 }
