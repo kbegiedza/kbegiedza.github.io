@@ -3,7 +3,7 @@
     <p>
         {% for category in site.categories %}
         {% capture category_name %}{{ category | first }}{% endcapture %}
-        <a href="{{site.baseurl}}/category/{{ category_name | slugize }}">
+        <a href="/categories/{{ category_name | slugize }}">
             {{ category_name }}
         </a><br>
         {% endfor %}
