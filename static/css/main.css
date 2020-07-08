@@ -72,8 +72,7 @@ a:hover {
 
 @media (max-width: 767px) {
     .section {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0em
     }
 }
 
