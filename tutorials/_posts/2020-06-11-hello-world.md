@@ -91,7 +91,7 @@ $$e^{ix} = \cos{x} + i\sin{x}$$
 
 ### Trzy
 
-Turducken brisket pig chuck<sup>[<a href="#ref_1">1</a>]</sup>. Strip steak pork loin burgdoggen, tri-tip brisket venison turkey pork alcatra ham hock ground round. Pork ground round alcatra filet mignon strip steak hamburger bacon pork belly cow landjaeger. Sirloin salami brisket bresaola jowl kevin porchetta chicken. Ribeye turkey tri-tip sausage, buffalo salami doner leberkas alcatra cow frankfurter ground round sirloin shoulder chislic.
+Turducken brisket pig chuck<sup>[<a href="#references">1</a>]</sup>. Strip steak pork loin burgdoggen, tri-tip brisket venison turkey pork alcatra ham hock ground round. Pork ground round alcatra filet mignon strip steak hamburger bacon pork belly cow landjaeger. Sirloin salami brisket bresaola jowl kevin porchetta chicken. Ribeye turkey tri-tip sausage, buffalo salami doner leberkas alcatra cow frankfurter ground round sirloin shoulder chislic.
 
 Prosciutto leberkas pig, pork loin pastrami turkey bacon burgdoggen frankfurter fatback cupim ham shoulder corned beef ball tip. Beef ham sausage tenderloin, bacon swine turkey. Beef swine capicola doner pastrami burgdoggen strip steak pork chop chicken. Ground round frankfurter andouille boudin, alcatra meatloaf sirloin capicola corned beef t-bone pork belly.
 
@@ -108,7 +108,8 @@ You can read more about this stuff there:
 *   [Lorem Ipsum](#)
 *   [Bacon Ipsum](https://baconipsum.com/)
 
+{:id="references" .references }
 ### References
 
-1.  {:id="ref_1"} Begiedza K. [Title of article, book or other medium](https://kbegiedza.eu/). 2020
-2.  {:id="ref_2"} Laaksonen DE, Nuutinen J, Lahtinen T, Rissanen A, Niskanen LK. [Changes in abdominal subcutaneous fat water content with rapid weight loss and long-term weight maintenance in abdominally obese men and women](https://www.google.com/). *International Journal of Obesity*. 2003
+1.  Begiedza K. [Title of article, book or other medium](https://kbegiedza.eu/). 2020
+2.  Laaksonen DE, Nuutinen J, Lahtinen T, Rissanen A, Niskanen LK. [Changes in abdominal subcutaneous fat water content with rapid weight loss and long-term weight maintenance in abdominally obese men and women](https://www.google.com/). *International Journal of Obesity*. 2003

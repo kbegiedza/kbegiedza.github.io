@@ -4,7 +4,9 @@
     margin-bottom: 1em;
 }
 
-.highlight, .highlight pre, .highlight .hll {
+.highlight,
+.highlight pre,
+.highlight .hll {
     background: #14171c;
     border-radius: 4px;
     border: 1px solid #1d1f21;
@@ -20,9 +22,13 @@ pre.highlight {
 pre > code:before {
     opacity: 0.5;
     display: block;
-    font-size: 1.1em;
+    font-size: 1em;
     text-transform: capitalize;
     content: " "attr(data-lang);
+}
+
+pre code {
+    font-size: 0.9em;
 }
 
 .highlight .c { color: #6A9955 } /* Comment */
@@ -83,7 +89,6 @@ pre > code:before {
 .highlight .vi { color: #D4D4D4 } /* Name.Variable.Instance */
 .highlight .il { color: #b5cea8 } /* Literal.Number.Integer.Long */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
-.highlight .gh { } /* Generic Heading & Diff Header */
 .highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
