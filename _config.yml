@@ -5,6 +5,9 @@ encoding: utf-8
 
 permalink: /:title
 
+sass:
+    style: compressed
+
 # Markdown stuff
 markdown: kramdown
 highlighter: rouge
