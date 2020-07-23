@@ -15,8 +15,8 @@ Skoro już zacząłem standardowym programistycznym zdaniem, możemy przejść d
 ## Skąd pomysł?
 
 Zawsze mówiłem sobie, że to jeszcze nie czas na pisanie, że stworzenie bloga zajmie mi mnóstwo czasu, że to trzeba zaplanować...    
-...a cały pomysł narodził się dosyć dawno, jeszcze, gdy byłem studentem Politechniki Wrocławskiej, na której to dostawałem mnóstwo pytań o porady, zaczynając od standardowego "jak zacząć programować?", "jak rozwiązać zadanie X", jak i bardziej zaawansowane, dotyczące głównie produkcji i optymalizacji gier.    
-Chciałem stworzyć miejsce, ze wskazówkami, sztuczkami i przykładowymi rozwiązaniami zadań, ale przez natłok obowiązków związanych z uczelnią oraz moimi pobocznymi projektami, cały czas pomysł ten schodził na drugi plan.
+...a cały pomysł narodził się dosyć dawno, jeszcze, gdy byłem studentem Politechniki Wrocławskiej, na której to dostawałem mnóstwo pytań o porady, zaczynając od standardowego "Jak zacząć programować?", "Jak rozwiązać zadanie X?", jak i bardziej zaawansowane, dotyczące głównie produkcji i optymalizacji gier.    
+Chciałem stworzyć miejsce ze wskazówkami, sztuczkami i przykładowymi rozwiązaniami zadań. Jednak przez natłok obowiązków związanych z uczelnią oraz moimi pobocznymi projektami, cały czas pomysł ten schodził na drugi plan.
 
 ## Trochę o założeniach i technologii
 
@@ -25,5 +25,3 @@ Dodatkowo dobrze byłoby, gdyby dodawanie postów było proste tak jak użycie `
 
 Tutaj pojawia się **Jekyll**, czyli generator statycznych stron internetowych wraz z rozwiązaniem nazwanym **GitHub Pages**, czyli hostowaniem wygenerowanej przez Jekyll strony poprzez repozytorium na GitHub.
 Mogę zatem dodawać nowe wpisy za pomocą dobrze mi znanych poleceń `git`, mogę też pisać sam tekst i nie martwić się o jego formatowanie, a dodatkowo łatwo rozszerzać bloga o nowe fukcjonalności wykorzystująć Ruby lub Liquid.
-
-Ze środowiska gamedevowego, w którym każdy chciał stworzyć swoją własną grę, najlepiej opartą o swój silnik, pozostała we mnie iskra, zatem postanowiłem napisać swój szablon, aby spersonalizować jak najbardziej każdy zakątek bloga.
