@@ -26,7 +26,7 @@ public void ChangeScene(int sceneIndex)
 ```
 
 Powyższy kod zmieni scenę, czyli dokona dokładnie tego, czego potrzebujemy, ale w sposób niezbyt przyjemny dla oka, co możemy zaobserwować poniżej.
-![Proste wczytywanie](/media/posts/20200725/load-scene-simple.gif)
+![Synchroniczne wczytywanie sceny](/media/posts/20200725/load-scene-simple.gif)
 
 Dlatego zazwyczaj używamy **asynchronicznego** ładowania scen, które niesie za sobą szereg korzyści, wśród których najważniejszy jest brak blokowania głównego wątku, a co za tym idzie, możliwość wyświetlenia znaczników zmiany sceny, na przykład atrakcyjnego paska postępu.
 
@@ -40,9 +40,9 @@ public void ChangeScene(int sceneIndex)
     StartCoroutine(LoadSceneCoroutine(sceneId));
 }
 
-public IEnumerator LoadSceneCoroutine(int sceneId, LoadSceneMode mode = LoadSceneMode.Single)
+public IEnumerator LoadSceneCoroutine(int sceneId)
 {
-    var loading = SceneManager.LoadSceneAsync(sceneId, mode);
+    var loading = SceneManager.LoadSceneAsync(sceneId);
     while (!loading.isDone)
     {
         var progress = loading.progress;
@@ -56,21 +56,25 @@ Przy tym podejściu otrzymujemy możliwość wyświetlania dowolnych elementów 
 Jednak szybko zauważymy, że nasza zmienna `progress` przechodzi płynnie w zakresie `<0;0.9>`, następnie zatrzymuje się i od razu przeskakuje do wartości `1`.
 Dzieje się tak dlatego, że silnik aktywuje scenę, gdy wartość asynchronicznej operacji ładowania wynosi `0.9`.
 
-Ponadto jeżeli mamy bardzo lekką scenę, która ładuje się szybko, możemy zaobserwować, że cały czas do zmiennej `process` będzie przypisana wartość `0`, co uniemożliwi nam utworzenie płynnego przejścia.
+Ponadto jeżeli mamy bardzo lekką scenę, która ładuje się szybko, możemy zaobserwować, że cały czas do zmiennej `progress` będzie przypisana wartość `0`, a dopiero po pełnym załadowaniu jej wartość zmieni się na `1`, co uniemożliwi nam utworzenie płynnego przejścia.
 
-< tutaj gif >
+Aby lepiej zilustrować problem dodajemy bardzo prosty *slider* wraz z komponentem tekstowym, którego wartość odpowiada wartości `progress`.
+
+![Asynchroniczne wczytywanie sceny](/media/posts/20200725/second-load.gif)
 
 ## Płynna zmiana sceny
 
-Wiedząc już o wartości aktywacji sceny, możemy odpowiednio zareagować modyfikująć kod do następującej postaci:
+Wiedząc już o wartości aktywacji sceny, możemy odpowiednio zareagować modyfikując kod do następującej postaci:
 
 ```c#
-public IEnumerator LoadSceneCoroutine(int sceneId, LoadSceneMode mode = LoadSceneMode.Single)
+public IEnumerator LoadSceneCoroutine(int sceneId)
 {
     const float activationThreshold = 0.9f;
 
-    var loading = SceneManager.LoadSceneAsync(sceneId, mode);
+    var loading = SceneManager.LoadSceneAsync(sceneId);
     loading.allowSceneActivation = false;
+
+    // wejście efektu maskującego, np. zaciemnienia
 
     var progress = loading.progress;
     while (progress < activationThreshold)
@@ -80,7 +84,17 @@ public IEnumerator LoadSceneCoroutine(int sceneId, LoadSceneMode mode = LoadScen
         yield return null;
     }
 
+    // ustawienie tej właściwości wywołuje aktywację i zmianę sceny
+    loading.allowSceneActivation = true;
+
+    while (!loading.isDone)
+    {
+        yield return null;
+    }
+
     progress = loading.progress;
+
+    // usunięcie efektu maskującego, np. usunięcie zaciemnienia
 }
 ```
 
