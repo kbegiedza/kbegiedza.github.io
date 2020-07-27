@@ -2,7 +2,7 @@
 layout: article
 title: Elastyczne środowisko pracy z&nbsp;VSCode
 sub-title: VS Code + Docker = ❤️
-title-image: /media/posts/historia-powstania-bloga.jpg
+title-image: /media/posts/elastyczne-srodowisko-pracy-z-vscode.jpg
 date: 2020-07-23
 description: Historia powstania bloga oraz decyzje projektowe
 category: [Narzędzia, DevOps]
