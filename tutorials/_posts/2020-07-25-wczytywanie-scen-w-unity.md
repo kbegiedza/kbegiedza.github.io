@@ -8,12 +8,13 @@ description: Zmiana sceny oraz wizualizacja postępu
 category: [Unity]
 ---
 
-Abstract...
+## Wprowadzenie
 
+Jeśli spojrzymy na jakąkolwiek grę, wszędzie odnajdziemy bardziej lub mniej złożone przejścia pomiędzy scenami. Ale jak właściwie można je zrobić w Unity?
 
 ## Jak zmienić scenę?
 
-Na samym początku upewniamy się, że wszystkie interesujące nam sceny dodane są do *Builda* (`Ctrl+Shift+B`)
+Na samym początku upewniamy się, że wszystkie interesujące nas sceny dodane są do *Builda* (`Ctrl+Shift+B`)
 ![BuildSettings](/media/posts/20200725/scenes.png)
 
 Teraz wstarczy jedno wywołanie statycznej metody klasy `SceneManager` znajdującej się w *namespace* `UnityEngine.SceneManagement`
@@ -32,7 +33,7 @@ Dlatego zazwyczaj używamy **asynchronicznego** ładowania scen, które niesie z
 
 ## Asynchroniczna zmiana sceny
 
-Aby tego dokonać ponownie skorzystamy z klasy `SceneManager`, tym razem używająć **asynchronicznej** wersji wcześniej wywoływanej metody oraz mechanizmu *coroutines*.
+Aby tego dokonać ponownie skorzystamy z klasy `SceneManager`, tym razem używając **asynchronicznej** wersji wcześniej wywoływanej metody oraz mechanizmu *coroutines*.
 
 ```c#
 public void ChangeScene(int sceneIndex)

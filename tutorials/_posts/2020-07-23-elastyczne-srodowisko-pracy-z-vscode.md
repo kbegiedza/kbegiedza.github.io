@@ -11,18 +11,17 @@ category: [Narzędzia, DevOps]
 ## Wprowadzenie
 
 Przygotowanie środowiska developerskiego nie jest prostym zadaniem, a przynajmniej nie było, dopóki nie pojawiły się narzędzia służące do konteneryzacji,
-dzięki którym możemy dostarczać oprogramowanie na odpowiednio dostosowanej wersji systemu operacyjnego wraz z wszystkimi narzędziami.
-Zanim narzędzia te stały się popularne istniała potrzeba pisania i ciągłego aktualizowania wszelkiego rodzaju skryptów czy używania maszyn wirtualnych dopasowanych w mniejszym lub większym stopniu do wymagań.
+dzięki którym możemy dostarczać oprogramowanie na odpowiednio dostosowanej wersji systemu operacyjnego wraz ze wszystkimi niezbędnymi zależnościami.
+Zanim narzędzia te stały się popularne istniała potrzeba pisania różnego rodzaju skryptów i ciągłego ich aktualizowania, czy używania maszyn wirtualnych dopasowanych w mniejszym lub większym stopniu do wymagań systemu.
 
 Korzystając z dobrodziejstw konteneryzacji, a dokładniej *Dockera* oraz jego integracji z *VS Code* możemy pójść o krok dalej i cały proces tworzenia oprogramowania wykonywać w kontenerze, co daje nam niesamowitą przenośność.
-Na naszym *hostcie* potrzebujemy jedynie dwóch wcześniej wymienionych programów, które są wieloplatformowe, a także udostępnione jako otwarte oprogramowanie.
+Na naszym *hostcie* potrzebujemy jedynie dwóch wcześniej wymienionych, wieloplatformowych programów, które udostępnione są jako otwarte oprogramowanie.
 
 ## VSCode w kontenerze
 
 ### Przygotowania
-Potrzebujemy wtyczki do VSCode `ms-vscode-remote.remote-containers`. Daje nam ona możliwość uruchomienia edytora (lub jego podpięcie) w kontenerze. Bardzo łatwo zainstalujemy ją za pomocą wbudowanego sklepu (`Ctrl+Shift+X`).
-Można również skorzystać z opcji autogenerowania konfiguracji, jeśli wygenerowany plik nas zadowoli, możemy od razu przejść do [otwierania w kontenerze](#otwieranie).
-Jeżeli jednak chcemy od razu skonfigurować środowisko tworzymy folder **.devcontainer**, a w nim plik **devcontainer.json**, który uzupełniamy poniższą konfiguracją:
+Potrzebujemy wtyczki do *VSCode*: `ms-vscode-remote.remote-containers`. Daje nam ona możliwość uruchomienia edytora (lub jego podpięcia) w kontenerze. Bardzo łatwo zainstalujemy ją za pomocą wbudowanego sklepu (`Ctrl+Shift+X`).
+W przypadku, gdy nie potrzebujemy tworzyć zaawansowanych konfiguracji możemy skorzystać z opcji autogenerowania i od razu przejść do [otwierania w kontenerze](#otwieranie). Jeśli wygenerowany plik nas zadowala lub chcemy od razu skonfigurować środowisko, tworzymy folder **.devcontainer**, a w nim plik **devcontainer.json**, który uzupełniamy poniższą konfiguracją:
 
 ```json
 {
@@ -43,14 +42,12 @@ Jeżeli jednak chcemy od razu skonfigurować środowisko tworzymy folder **.devc
 }
 ```
 
-Kolekcję `"extensions"` możemy uzupełniać o kolejne roszerzenia, które automatycznie zostaną doinstalowane do naszego kontenera roboczego. W kolekcji `"forwardPorts"` możemy wskazać porty, które powinny być przekierowane, natomiast za pomocą `"mounts"` ustalamy współdzielenie zasobów dyskowych pomiędzy *hostem*, a kontenerem.
+Kolekcję `"extensions"` możemy uzupełniać o kolejne roszerzenia, które automatycznie zostaną doinstalowane do naszego edytora w kontenerze roboczym. W kolekcji `"forwardPorts"` możemy wskazać porty, które powinny zostać przekierowane, natomiast za pomocą `"mounts"` ustalamy współdzielenie zasobów dyskowych pomiędzy *hostem*, a kontenerem.
 
-Zamiast klucza `"build"` możemy wskazać bezpośrednio obraz *Dockera* za pomocą `"image"`, wtedy konfiguracja zawierałaby:
+Zamiast klucza `"build"` możemy wskazać bezpośrednio obraz *Dockera* za pomocą `"image"`. Wtedy konfiguracja zawierałaby:
 ```json
 {
-    "name": "Nazwa",
     "image": "nazwa-obrazu:tag",
-    //... 
 }
 ```
 
@@ -63,7 +60,7 @@ Otwieramy panel komend edytora (`Ctrl+Shift+P`), lub klikamy w zielony przycisk 
 A co w przypadku, gdy potrzebujemy na przykład bazy danych, albo innego serwisu, który nie znajduje się w naszym projekcie, trzeba go odpalać ręcznie?
 Odpowiedzią na to pytanie będzie użycie *Docker compose*.
 
-Tworzymy więc plik **docker-compose.yml** w uprzednio stworzony folderze **.devcontainer**
+Tworzymy plik **docker-compose.yml** w uprzednio stworzonym folderze **.devcontainer** i uzupełniamy go definiując serwis na którym będziemy pracowali w następujący sposób:
 
 ```yaml
 version: "3.5"
@@ -74,7 +71,7 @@ services:
         command: /bin/sh -c "while sleep 1000; do :; done"
 ```
 
-Zatem w pliku **devcontainer.json** zastępujemy klucz `"build"` lub `"image"` następującymi wpisami:
+Następnie w pliku **devcontainer.json** zastępujemy klucz `"build"` lub `"image"` następującymi wpisami:
 
 ```json
 {
@@ -89,4 +86,4 @@ Zatem w pliku **devcontainer.json** zastępujemy klucz `"build"` lub `"image"` n
 
 Wartość `service` musi odpowiadać nazwie serwisu podanego w pliku **docker-compose.yml**, a jeżeli zdecydujemy rozbić plik konfiguracyjny, to także w **docker-compose z serwisami**.
 
-Teraz możemy przebudować i otworzyć projekt w kontenerze i gotowe, możemy cieszyć się w pełni przenośnym i łatwo zarządzalnym środowiskiem developerskim.
+Po zaktualizowaniu plików konfiguracyjnych możemy przebudować oraz otworzyć projekt w kontenerze i gotowe. Możemy cieszyć się w pełni przenośnym i łatwo zarządzalnym środowiskiem developerskim.
