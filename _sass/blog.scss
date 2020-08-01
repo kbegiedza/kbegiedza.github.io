@@ -397,3 +397,12 @@ a.is-social {
     margin-top: -4.375em;
     padding-top: 5em;
 }
+
+.post-image {
+    text-align: center;
+}
+
+.post-image>img{
+    height: auto;
+    max-width: 75%;
+}
