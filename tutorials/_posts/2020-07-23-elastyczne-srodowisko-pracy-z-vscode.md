@@ -36,9 +36,6 @@ W przypadku, gdy nie potrzebujemy tworzyć zaawansowanych konfiguracji możemy s
     "extensions": [
         "ms-dotnettools.csharp"
     ],
-    "mounts": [],
-    "remoteEnv": {},
-    "forwardPorts":[],
 }
 ```
 
