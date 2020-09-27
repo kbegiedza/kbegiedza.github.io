@@ -1,0 +1,14 @@
+---
+layout: article
+title: Całkiem długi tytuł, który testuje więcej tekstu i możliwości różnych
+sub-title: Test
+# title-image: /media/posts/wczytywanie-scen-w-unity.jpg
+title-image: /static/img/placeholder0.png
+date: 2020-09-27
+description: Test
+category: [DevOps]
+---
+
+## Test
+
+test123

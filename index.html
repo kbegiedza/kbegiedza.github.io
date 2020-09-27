@@ -44,16 +44,6 @@ description: Blog programisty, twórcy narzędzi oraz gier, dotyczący wytwarzan
                                 {{ post.date | date: "%Y" }}
                             </p>
                         </div>
-                        <div class="home-title-content-tags home-text">
-                            <p class="home-title-sub-text">
-                                {% for category in post.category %}
-                                {{ category}}
-                                {% if forloop.last == false %}
-                                |
-                                {% endif %}
-                                {% endfor %}
-                            </p>
-                        </div>
                     </a>
                 </div>
             </article>
@@ -95,16 +85,6 @@ description: Blog programisty, twórcy narzędzi oraz gier, dotyczący wytwarzan
                                     {% when '12' %}Gru
                                     {% endcase %}
                                     {{ post.date | date: "%Y" }}
-                                </p>
-                            </div>
-                            <div class="home-title-content-tags home-text">
-                                <p class="home-title-sub-text">
-                                    {% for category in post.category %}
-                                    {{ category}}
-                                    {% if forloop.last == false %}
-                                    |
-                                    {% endif %}
-                                    {% endfor %}
                                 </p>
                             </div>
                         </a>

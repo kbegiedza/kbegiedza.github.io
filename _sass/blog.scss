@@ -20,7 +20,7 @@ a, a:link, a:visited {
 }
 
 .navbar {
-    background-color: rgba(13, 16, 23, 0.96);
+    background-color: #0d1017f5;
 }
 
 .navbar-menu {
@@ -143,6 +143,17 @@ a:hover {
     }
 }
 
+.home-tile {
+    border-radius: 5px;
+}
+
+.is-child .home-title-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
 .home-title-image {
     display: block;
     opacity: 0.7;
@@ -150,7 +161,7 @@ a:hover {
 }
 
 .home-title-text {
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .home-title-sub-text {
@@ -165,9 +176,10 @@ a:hover {
 
 .home-title-content {
     pointer-events:none;
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
+    padding: 1.33333rem 1.33333rem 0;
+    // position: absolute;
+    // left: 1em;
+    // bottom: 1em;
     color: #f2f2f2;
 }
 
@@ -180,14 +192,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .home-title-text {
-        font-size: 1rem;
-    }
-    
-    .home-title-sub-text {
-        font-size: 0.75rem;
-    }
-    
     .home-title-date {
         font-size: 0.5rem;
     }
@@ -195,11 +199,11 @@ a:hover {
 
 @media (min-width: 1024px) {
     .home-title-text {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     
     .home-title-sub-text {
-        font-size: 0.9em;
+        font-size: 0.75em;
     }
     
     .home-title-date {
