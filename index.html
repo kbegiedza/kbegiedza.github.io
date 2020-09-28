@@ -13,17 +13,14 @@ description: Blog programisty, twórcy narzędzi oraz gier, dotyczący wytwarzan
         {% if forloop.first %}
         <div class="tile is-parent">
             <article class="tile is-child">
-                <div class="home-tile">
+                <div class="home-top-tile">
                     <a href="{{post.url}}">
-                        <img class="home-title-image" src="{{ post.title-image }}">
+                        <img class="home-top-title-image" src="{{ post.title-image }}">
                         <div class="home-image-overlay">
                         </div>
                         <div class="article-title-content home-text">
                             <h1 class="article-title-text">
                                 {{ post.title }}</h1>
-                            <p class="article-title-sub-text">
-                                {{ post.sub-title }}
-                            </p>
                             <p class="article-title-date">
                                 {% assign m = post.date | date: "%-m" %}
                                 {{ post.date | date: "%-d" }}
@@ -63,7 +60,9 @@ description: Blog programisty, twórcy narzędzi oraz gier, dotyczący wytwarzan
                             </div>
                             <div class="home-title-content home-text">
                                 <h1 class="home-title-text">
-                                    {{ post.title }}</h1>
+                                    {{ post.title }}
+                                </h1>
+                                <hr>
                                 <p class="home-title-sub-text">
                                     {{ post.sub-title }}
                                 </p>
