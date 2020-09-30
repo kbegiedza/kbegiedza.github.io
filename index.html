@@ -1,100 +1,86 @@
 ---
 layout: default
 title: Krzysztof Begiedza - Blog
-description: Blog programisty, twórcy narzędzi oraz gier, dotyczący wytwarzania oprogramowania i gamedevu
+description: Description
 ---
 
 {% assign recent_posts = site.posts | sort: 'date' | reverse %}
 
-<div class="tile is-ancestor">
-    <div class="tile is-vertical is-12">
-        {% for post in recent_posts limit: 5 %}
+<div>
+    {% for post in recent_posts limit: 5 %}
+    <article>
+        <div>
+            <header>
+                <img class="" src="{{ post.title-image }}">
+            </header>
+            <article>
+                <h1 class="">
+                    {{ post.title }}
+                </h1>
+                <p class="">
+                    {{ post.description }}
+                </p>
+            </article>
+            <footer>
+                <p class="">
+                    {% include post_date.html %}
+                </p>
+            </footer>
+        </div>
+    </article>
+    {% endfor %}
+</div>
 
+<!--
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+
+        {% for post in recent_posts limit: 5 %}
         {% if forloop.first %}
         <div class="tile is-parent">
             <article class="tile is-child">
-                <div class="home-top-tile">
-                    <a href="{{post.url}}">
-                        <img class="home-top-title-image" src="{{ post.title-image }}">
-                        <div class="home-image-overlay">
-                        </div>
-                        <div class="article-title-content home-text">
-                            <h1 class="article-title-text">
-                                {{ post.title }}</h1>
-                            <p class="article-title-date">
-                                {% assign m = post.date | date: "%-m" %}
-                                {{ post.date | date: "%-d" }}
-                                {% case m %}
-                                {% when '1' %}Sty
-                                {% when '2' %}Lut
-                                {% when '3' %}Mar
-                                {% when '4' %}Kwi
-                                {% when '5' %}Maj
-                                {% when '6' %}Cze
-                                {% when '7' %}Lip
-                                {% when '8' %}Sie
-                                {% when '9' %}Wrz
-                                {% when '10' %}Paź
-                                {% when '11' %}Lis
-                                {% when '12' %}Gru
-                                {% endcase %}
-                                {{ post.date | date: "%Y" }}
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                Test
             </article>
         </div>
         {% else %}
 
         {% assign mod = forloop.index | modulo: 2 %}
+    </div>
+
         {% if mod == 0 %}
         <div class="tile">
-            {% endif %}
+        {% endif %}
             <div class="tile is-parent">
-                <article class="tile is-child">
-                    <div class="home-tile">
+                <div class="tile is-child">
+                    <header>
+                        <img class="" src="{{ post.title-image }}">
+                    </header>
+                    <article class="">
                         <a href="{{post.url}}">
-                            <img class="home-title-image" src="{{ post.title-image }}">
-                            <div class="home-image-overlay">
-                            </div>
-                            <div class="home-title-content home-text">
-                                <h1 class="home-title-text">
+                            <div class="">
+                                <h1 class="">
                                     {{ post.title }}
                                 </h1>
                                 <hr>
-                                <p class="home-title-sub-text">
+                                <p class="">
                                     {{ post.description }}
-                                </p>
-                                <p class="home-title-date">
-                                    {% assign m = post.date | date: "%-m" %}
-                                    {{ post.date | date: "%-d" }}
-                                    {% case m %}
-                                    {% when '1' %}Sty
-                                    {% when '2' %}Lut
-                                    {% when '3' %}Mar
-                                    {% when '4' %}Kwi
-                                    {% when '5' %}Maj
-                                    {% when '6' %}Cze
-                                    {% when '7' %}Lip
-                                    {% when '8' %}Sie
-                                    {% when '9' %}Wrz
-                                    {% when '10' %}Paź
-                                    {% when '11' %}Lis
-                                    {% when '12' %}Gru
-                                    {% endcase %}
-                                    {{ post.date | date: "%Y" }}
                                 </p>
                             </div>
                         </a>
-                    </div>
-                </article>
+                    </article>
+                    <footer>
+                        <p class="">
+                            {% include post_date.html %}
+                        </p>
+                    </footer>
+                </div>
             </div>
             {% if mod == 1 %}
         </div>
         {% endif %}
-
+        
         {% endif %}
         {% endfor %}
     </div>
 </div>
+-->
