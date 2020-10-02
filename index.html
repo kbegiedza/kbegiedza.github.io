@@ -14,10 +14,17 @@ description: Description
 
     .post {
         padding-bottom: 1em;
-        width: 50%;
-        flex: 0 0 50%;
+        width: 100%;
+        flex: 0 0 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    @media (min-width: 1024px) {
+        .post {
+            width: 50%;
+            flex: 0 0 50%;
+        }
     }
 
     .post-tile {
@@ -34,6 +41,12 @@ description: Description
         display: block;
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
+    }
+
+    .post-image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
     }
 
     .post article {
@@ -61,12 +74,6 @@ description: Description
         color: #ffffff80;
         letter-spacing: 1px;
         text-transform: uppercase;
-    }
-
-    .post-image-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
     }
 
     @media (hover: hover) {
