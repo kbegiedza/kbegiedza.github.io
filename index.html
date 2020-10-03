@@ -6,6 +6,7 @@ description: Description
 
 {% assign recent_posts = site.posts | sort: 'date' | reverse %}
 
+<!-- post feed -->
 <style>
     .post-feed {
         display: flex;
@@ -101,8 +102,22 @@ description: Description
     }
 </style>
 
-<div>
-</div>
+<!-- landing hero -->
+<style>
+</style>
+
+<section class="hero">
+    <div class="hero-body has-text-centered">
+        <div class="container">
+            <h1 class="title">
+                Hero title
+            </h1>
+            <h2 class="subtitle">
+                Hero subtitle
+            </h2>
+        </div>
+    </div>
+</section>
 
 <div class="post-feed">
     {% for post in recent_posts limit: 4 %}
