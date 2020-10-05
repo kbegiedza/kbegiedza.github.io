@@ -1,121 +1,153 @@
 ---
 layout: default
 title: Krzysztof Begiedza - Blog
-description: Blog programisty, twórcy narzędzi oraz gier, dotyczący wytwarzania oprogramowania i gamedevu
+description: Description
 ---
 
 {% assign recent_posts = site.posts | sort: 'date' | reverse %}
 
-<div class="tile is-ancestor">
-    <div class="tile is-vertical is-12">
-        {% for post in recent_posts limit: 5 %}
+<!-- post feed -->
+<style>
+    .post-feed {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        {% if forloop.first %}
-        <div class="tile is-parent">
-            <article class="tile is-child">
-                <div class="home-tile">
-                    <a href="{{post.url}}">
-                        <img class="home-title-image" src="{{ post.title-image }}">
-                        <div class="home-image-overlay">
-                        </div>
-                        <div class="article-title-content home-text">
-                            <h1 class="article-title-text">
-                                {{ post.title }}</h1>
-                            <p class="article-title-sub-text">
-                                {{ post.sub-title }}
-                            </p>
-                            <p class="article-title-date">
-                                {% assign m = post.date | date: "%-m" %}
-                                {{ post.date | date: "%-d" }}
-                                {% case m %}
-                                {% when '1' %}Sty
-                                {% when '2' %}Lut
-                                {% when '3' %}Mar
-                                {% when '4' %}Kwi
-                                {% when '5' %}Maj
-                                {% when '6' %}Cze
-                                {% when '7' %}Lip
-                                {% when '8' %}Sie
-                                {% when '9' %}Wrz
-                                {% when '10' %}Paź
-                                {% when '11' %}Lis
-                                {% when '12' %}Gru
-                                {% endcase %}
-                                {{ post.date | date: "%Y" }}
-                            </p>
-                        </div>
-                        <div class="home-title-content-tags home-text">
-                            <p class="home-title-sub-text">
-                                {% for category in post.category %}
-                                {{ category}}
-                                {% if forloop.last == false %}
-                                |
-                                {% endif %}
-                                {% endfor %}
-                            </p>
+    .post {
+        padding-bottom: 1em;
+        width: 100%;
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: 1024px) {
+        .post {
+            width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+
+    .post-tile {
+        border-radius: 7px;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        border: 1px solid #1d1f21;
+        flex-grow: 1;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .post-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+
+    .post-image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .post article {
+        padding: 1.33em;
+        flex-grow: 1;
+    }
+
+    .post-title {
+        padding-bottom: 1em;
+        font-size: 1.33em;
+        font-weight: bold;
+    }
+
+    .post-desc {
+        font-size: 1em;
+    }
+
+    .post footer {
+        margin-bottom: 1.33em;
+        padding: 0 1.33em 0 1.33em;
+    }
+
+    .post-date {
+        font-size: 0.8em;
+        color: #ffffff80;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    @media (hover: hover) {
+        .post-image-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0.6;
+            background-color: black;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            transition: ease 1s;
+        }
+
+        .post-image-overlay:hover {
+            transition: ease 1s;
+            opacity: 0.1;
+        }
+    }
+</style>
+
+<!-- landing hero -->
+<style>
+</style>
+
+<section class="hero">
+    <div class="hero-body has-text-centered">
+        <div class="container">
+            <h1 class="title">
+                Hero title
+            </h1>
+            <h2 class="subtitle">
+                Hero subtitle
+            </h2>
+        </div>
+    </div>
+</section>
+
+<div class="post-feed">
+    {% for post in recent_posts limit: 4 %}
+    <article class="post">
+        <div class="post-tile">
+            <header>
+                <div class="post-image-container">
+                    <a href="{{ post.url }}">
+                        <img class="post-image" src="{{ post.thumbnail }}">
+                        <div class="post-image-overlay">
                         </div>
                     </a>
                 </div>
+            </header>
+            <article>
+                <a href="{{ post.url }}">
+                    <h1 class="post-title">
+                        {{ post.title }}
+                    </h1>
+                </a>
+                <p class="post-desc">
+                    {{ post.description }}
+                </p>
             </article>
+            <footer>
+                <p class="post-date">
+                    {% include post_date.html %}
+                </p>
+            </footer>
         </div>
-        {% else %}
-
-        {% assign mod = forloop.index | modulo: 2 %}
-        {% if mod == 0 %}
-        <div class="tile">
-            {% endif %}
-            <div class="tile is-parent">
-                <article class="tile is-child">
-                    <div class="home-tile">
-                        <a href="{{post.url}}">
-                            <img class="home-title-image" src="{{ post.title-image }}">
-                            <div class="home-image-overlay">
-                            </div>
-                            <div class="home-title-content home-text">
-                                <h1 class="home-title-text">
-                                    {{ post.title }}</h1>
-                                <p class="home-title-sub-text">
-                                    {{ post.sub-title }}
-                                </p>
-                                <p class="home-title-date">
-                                    {% assign m = post.date | date: "%-m" %}
-                                    {{ post.date | date: "%-d" }}
-                                    {% case m %}
-                                    {% when '1' %}Sty
-                                    {% when '2' %}Lut
-                                    {% when '3' %}Mar
-                                    {% when '4' %}Kwi
-                                    {% when '5' %}Maj
-                                    {% when '6' %}Cze
-                                    {% when '7' %}Lip
-                                    {% when '8' %}Sie
-                                    {% when '9' %}Wrz
-                                    {% when '10' %}Paź
-                                    {% when '11' %}Lis
-                                    {% when '12' %}Gru
-                                    {% endcase %}
-                                    {{ post.date | date: "%Y" }}
-                                </p>
-                            </div>
-                            <div class="home-title-content-tags home-text">
-                                <p class="home-title-sub-text">
-                                    {% for category in post.category %}
-                                    {{ category}}
-                                    {% if forloop.last == false %}
-                                    |
-                                    {% endif %}
-                                    {% endfor %}
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            {% if mod == 1 %}
-        </div>
-        {% endif %}
-
-        {% endif %}
-        {% endfor %}
-    </div>
+    </article>
+    {% endfor %}
 </div>
