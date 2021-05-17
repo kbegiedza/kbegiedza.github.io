@@ -10,23 +10,7 @@ layout: default
             {{ page.sub-title }}
         </p>
         <p class="article-title-date">
-            {% assign m = page.date | date: "%-m" %}
-            {{ page.date | date: "%-d" }}
-            {% case m %}
-            {% when '1' %}Sty
-            {% when '2' %}Lut
-            {% when '3' %}Mar
-            {% when '4' %}Kwi
-            {% when '5' %}Maj
-            {% when '6' %}Cze
-            {% when '7' %}Lip
-            {% when '8' %}Sie
-            {% when '9' %}Wrz
-            {% when '10' %}Paź
-            {% when '11' %}Lis
-            {% when '12' %}Gru
-            {% endcase %}
-            {{ page.date | date: "%Y" }}
+            {% include post-date.html date=page.date %}
         </p>
     </div>
 </div>
