@@ -8,23 +8,7 @@ description: List wszystkich artykułów na blogu.
     <ul>
         {% for post in site.posts %}
         <li><span>
-                {% assign m = post.date | date: "%-m" %}
-                {{ post.date | date: "%-d" }}
-                {% case m %}
-                {% when '1' %}Sty
-                {% when '2' %}Lut
-                {% when '3' %}Mar
-                {% when '4' %}Kwi
-                {% when '5' %}Maj
-                {% when '6' %}Cze
-                {% when '7' %}Lip
-                {% when '8' %}Sie
-                {% when '9' %}Wrz
-                {% when '10' %}Paź
-                {% when '11' %}Lis
-                {% when '12' %}Gru
-                {% endcase %}
-                {{ post.date | date: "%Y" }}
+            {% include post-date.html date=post.date %}
             </span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
