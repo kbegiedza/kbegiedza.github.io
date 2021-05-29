@@ -2,6 +2,7 @@ author: Krzysztof Begiedza
 title: Blog - Krzysztof Begiedza
 description: Blog - Krzysztof Begiedza
 encoding: utf-8
+mode: dark
 
 permalink: /:title
 
@@ -25,3 +26,7 @@ collections:
 plugins:
     - jekyll-feed
     - jekyll-sitemap
+
+exclude:
+    - "CNAME"
+    - "*.Dockerfile"
