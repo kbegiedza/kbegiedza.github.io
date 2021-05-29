@@ -9,6 +9,8 @@ permalink: /:title
 sass:
     style: compressed
 
+number_of_posts: 5
+
 # Markdown stuff
 markdown: kramdown
 highlighter: rouge
@@ -17,6 +19,7 @@ kramdown:
     syntax_highlighter: rouge
     math_engine: mathjax
 
+# Collections dir
 collections_dir: tutorials
 collections:
     one:
@@ -29,4 +32,5 @@ plugins:
 
 exclude:
     - "CNAME"
-    - "*.Dockerfile"
+    - "Dockerfile"
+    - "README.md"
