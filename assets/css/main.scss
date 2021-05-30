@@ -1,3 +1,6 @@
+---
+---
+
 // Fonts preferences
 $sans-family: Roboto, sans-serif;
 $mono-family: Consolas, monospace;
@@ -59,5 +62,4 @@ $on-widescreen: 1152px;
 }
 
 // Import sass files
-@import "klise/fonts", "klise/base", "klise/layout", "klise/post",
-  "klise/miscellaneous", "klise/syntax", "klise/dark";
+@import "fonts", "blog", "dark-code", "social";

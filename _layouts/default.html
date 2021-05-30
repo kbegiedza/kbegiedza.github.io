@@ -1,43 +1,83 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
-{% include header.html %}
+<html class="has-navbar-fixed-top">
 
-<body data-theme="{{ site.mode }}" class="notransition">
+<head>
+    {% include 3rdparty/analytics.html %}
 
-  <script>
-    const body = document.body;
-    const data = body.getAttribute("data-theme");
+    <title>
+        {% if page.title %}
+        {{ page.title }}
+        {% else %}
+        {{ site.title }}
+        {% endif %}
+    </title>
 
-    const initTheme = (state) => {
-      if (state === "dark"){
-        console.log(state);
-        body.setAttribute("data-theme", "dark");
-      } else if (state === "light") {
-        console.log(state);
-        body.removeAttribute("data-theme");
-      } else {
-        console.log(data);
-        localStorage.setItem("theme", data);
-      }
-    };
+    <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    initTheme(localStorage.getItem("theme"));
-    console.log("helo!");
+    <link rel="canonical" href="{{ page.url | prepend: site.url }}">
+    <link rel="alternate" type="application/atom+xml" title="Blog - Krzysztof Begiedza" href="/feed.xml">
 
-    setTimeout(() => body.classList.remove("notransition"), 75);
-  </script>
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#0d1017">
+    <meta name="theme-color" content="#0d1017">
 
-  {% include navbar.html %}
-  <div class="wrapper">
-    {% include author.html %}
-    <main aria-label="Content">
-      {{ content }}
-    </main>
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+    <meta property="og:site_name" content="Krzysztof Begiedza - Blog">
+    <meta property="article:publisher" content="https://www.instagram.com/kbegiedza" />
+    <meta property="article:author" content="https://www.instagram.com/kbegiedza" />
+    <meta property="article:published_time" content="{{ page.date }}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:site" content="@ursanon" />
+    <meta name="twitter:creator" content="@ursanon">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+</head>
+
+<body>
+    {% include navigation.html %}
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered is-variable is-8">
+                <div class="column is-8">
+                    {{ content }}
+                </div>
+                <div class="column is-3">
+                    {% include side/index.html %}
+                </div>
+            </div>
+        </div>
+    </section>
+
     {% include footer.html %}
-  </div>
 
+    <script src="/assets/js/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/3640aba6f1.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 </body>
+
+
 </html>

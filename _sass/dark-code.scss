@@ -1,16 +1,16 @@
 .highlighter-rouge {
     padding-top: 1em;
-    padding: 1em;
-    margin-bottom: 1em;
-}
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+  }
 
 .language-plaintext.highlighter-rouge {
     padding: 0em 0.25em;
     white-space: nowrap;
-}
+  }
 
-.highlight,
-.highlight pre,
+figure.highlight,
+.highlight pre.highlight,
 .highlight .hll,
 .language-plaintext {
     background: #14171c;
@@ -19,23 +19,23 @@
     color: #D4D4D4;
     font-family: monospace, monospace;
     font-size: 1em;
-}
+  }
+
+.highlight pre {
+    padding: .5em 1em;
+  }
 
 pre.highlight {
     padding: .5em 1em;
-}
+  }
 
 pre > code:before {
     opacity: 0.5;
     display: block;
-    font-size: 1em;
+    font-size: 0.9em;
     text-transform: capitalize;
     content: " "attr(data-lang);
-}
-
-pre code {
-    font-size: 0.9em;
-}
+  }
 
 .highlight .c { color: #6A9955 } /* Comment */
 .highlight .cm { color: #6A9955 } /* Comment.Multiline */

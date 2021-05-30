@@ -9,8 +9,6 @@ permalink: /:title
 sass:
     style: compressed
 
-number_of_posts: 5
-
 # Markdown stuff
 markdown: kramdown
 highlighter: rouge
