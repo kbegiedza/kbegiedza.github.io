@@ -1,9 +1,9 @@
 ---
-date:   2020-08-29 09:29:20 +0700
+date:   2021-05-30 09:29:20 +0700
 layout: article
-title:  "Welcome to Jekyll!"
+title:  "This is very interesting but quite long title which can inform you better"
 sub-title: "Welcome my little jekyll!"
-description: "Jekyll requires blog post files to be named according to the following format"
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus rutrum interdum. Etiam enim tellus, porta nec diam eget, facilisis vestibulum nibh. Aenean ac mi eleifend, commodo urna placerat, ultrices diam."
 categories: jekyll update
 thumbnail: /assets/img/placeholder0-sm.png
 title-image: /assets/img/placeholder0.png
