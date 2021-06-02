@@ -15,7 +15,7 @@ strong {
 a, a:link, a:visited {
     transition: color 0.5s ease;
     text-decoration: none;
-    
+
     color: #c78943;
 }
 
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .article-title-image {
-    display: block;
+    // display: block;
     opacity: 0.7;
     border-radius: 4px;
 }
@@ -108,11 +108,14 @@ a:hover {
 }
 
 .article-title-content {
+    padding-top: 2em;
+/*
     pointer-events:none;
     position: absolute;
     left: 1em;
     bottom: 1em;
     color: #f2f2f2;
+ */
 }
 
 .article-title-content-tags {
@@ -201,11 +204,11 @@ a:hover {
     .home-title-text {
         font-size: 1em;
     }
-    
+
     .home-title-sub-text {
         font-size: 0.75em;
     }
-    
+
     .home-title-date {
         font-size: 0.75em;
     }
@@ -369,7 +372,7 @@ a.is-social {
         border-radius: 4px;
         transition: ease 1s;
     }
-    
+
     .home-image-overlay:hover {
         transition: ease 1s;
         opacity: 0.1;
