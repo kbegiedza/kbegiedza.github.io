@@ -68,6 +68,8 @@ description: Description
     }
 
     .post footer {
+        justify-content: space-between;
+        display: flex;
         margin-bottom: 1.33em;
         padding: 0 1.33em 0 1.33em;
     }
@@ -143,9 +145,8 @@ description: Description
                 </p>
             </article>
             <footer>
-                <p class="post-date">
-                    {{ post.date | date: "%d %b %Y" }}
-                </p>
+                <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+                <a class="post-date" href="{{ post.url }}">Read more ></a>
             </footer>
         </div>
     </article>
