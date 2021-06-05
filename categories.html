@@ -1,0 +1,43 @@
+---
+layout: default
+title: Categories
+---
+
+<style>
+.divider {
+    margin: 1em 0 1em 0;
+    height: 1px;
+    border: solid #f2f2f2 1px;
+}
+</style>
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered is-variable is-8">
+            <div class="column is-8">
+                <div>
+                    {% for category in site.categories %}
+                    <a href="#{{ category[0] | slugify }}"> {{ category[0] }}</a>
+                    {% endfor %}
+                </div>
+                <div class="divider"></div>
+                <div>
+                    {% for category in site.categories %}
+                    <h2 id="{{ category[0] | slugify }}"> {{ category[0] }}</h2>
+                    <ul>
+                        {% for post in category[1] %}
+                        <li>
+                            <a href="{{ site.baseurl }}{{ post.url }}">
+                                <span>{{ post.title }}</span>
+                                <small>{{ post.date | date_to_string }}</small>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

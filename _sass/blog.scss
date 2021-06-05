@@ -11,7 +11,6 @@ strong {
     color: #f2f2f2;
 }
 
-/* TODO: to separate class */
 a, a:link, a:visited {
     transition: color 0.5s ease;
     text-decoration: none;
@@ -55,6 +54,7 @@ a.navbar-item:active {
 }
 
 .footer {
+    padding-bottom: 3rem;
     background-color: #0d1017;
 }
 
@@ -88,7 +88,6 @@ a:hover {
 }
 
 .article-title-image {
-    // display: block;
     opacity: 0.7;
     border-radius: 4px;
 }
@@ -110,13 +109,6 @@ a:hover {
 
 .article-title-content {
     padding-top: 2em;
-/*
-    pointer-events:none;
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
-    color: #f2f2f2;
- */
 }
 
 .article-title-content-tags {
@@ -425,4 +417,97 @@ a.is-social {
     max-width: 75%;
 }
 
-/**/
+.post-feed {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post {
+    padding-bottom: 1em;
+    width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .post {
+        width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+.post-tile {
+    border-radius: 7px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid #1d1f21;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.post-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.post article {
+    padding: 1.33em;
+    flex-grow: 1;
+}
+
+.post-title {
+    padding-bottom: 1em;
+    font-size: 1.33em;
+    font-weight: bold;
+}
+
+.post-desc {
+    font-size: 1em;
+}
+
+.post footer {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 1.33em;
+    padding: 0 1.33em 0 1.33em;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: #ffffff80;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media (hover: hover) {
+    .post-image-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.6;
+        background-color: black;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        transition: ease 1s;
+    }
+
+    .post-image-overlay:hover {
+        transition: ease 1s;
+        opacity: 0.1;
+    }
+}
