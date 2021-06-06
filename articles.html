@@ -1,0 +1,22 @@
+---
+layout: default
+title: Articles
+---
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered is-variable is-8">
+            <div class="column is-8">
+                {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+                {% for year in postsByYear %}
+                  <h1>{{ year.name }}</h1>
+                    <ul>
+                      {% for post in year.items %}
+                        <li><a href="{{ post.url }}">{{ post.title }} {{ post.date | date: "%B %e, %Y" }}</a></li>
+                      {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
