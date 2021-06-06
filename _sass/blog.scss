@@ -5,6 +5,14 @@ html, body {
     background-size: cover;
     background-color: #0d1017;
     overflow-x: hidden;
+
+    display: flex;
+    min-height: 95vh;
+    flex-direction: column;
+}
+
+.section {
+    flex: 1;
 }
 
 strong {
