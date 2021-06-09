@@ -1,8 +1,46 @@
 document.addEventListener('DOMContentLoaded', onContentLoaded);
 
 function onContentLoaded() {
+    const theme = localStorage.getItem('theme');
+
+    updateTheme(theme);
+    addThemeToggle();
     fixRougeHightlighter();
     addActiveToggleToNavbarBurgers();
+}
+
+function addThemeToggle() {
+    const toggle = document.getElementById('theme-toggle');
+    toggle.onclick = swapTheme;
+}
+
+function updateTheme(theme) {
+    const toggle = document.getElementById('theme-toggle');
+    const toggleIcon = toggle.getElementsByTagName('i')[0];
+
+    if (theme == 'dark') {
+        document.body.removeAttribute('theme')
+        toggleIcon.classList.replace('fas', 'far')
+    }
+    else {
+        document.body.setAttribute('theme', theme)
+        toggleIcon.classList.replace('far', 'fas')
+    }
+
+    localStorage.setItem('theme', theme);
+}
+
+function swapTheme() {
+    let theme = localStorage.getItem('theme');
+
+    if (theme == 'dark') {
+        theme = 'light';
+    }
+    else {
+        theme = 'dark';
+    }
+
+    updateTheme(theme);
 }
 
 function addActiveToggleToNavbarBurgers() {
