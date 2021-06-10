@@ -1,2 +1,24 @@
-body[site-theme="light"] {
+body[theme="light"] {
+    display: flex;
+    min-height: 95vh;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-size: cover;
+    color: $light-text-color;
+    font-family: $sans-family;
+    font-weight: $text-weight-normal;
+    background-color: $light-background-color;
+
+    .navbar {
+        background-color: $light-background-color;
+    }
+
+    a.navbar-item:hover,
+    a.navbar-item:focus {
+        background-color: $light-background-color;
+    }
+
+    .footer {
+        background-color: $light-background-color;
+    }
 }

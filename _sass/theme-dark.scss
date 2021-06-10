@@ -1,6 +1,6 @@
 html, body {
     color: #f2f2f2;
-    font-family: 'Roboto';
+    font-family: $sans-family;
     font-weight: 400;
     background-size: cover;
     background-color: #0d1017;
@@ -13,10 +13,6 @@ html, body {
 
 .section {
     flex: 1;
-}
-
-strong {
-    color: #f2f2f2;
 }
 
 a, a:link, a:visited {
@@ -46,7 +42,7 @@ a.navbar-item {
     color: #c78943;
     font-weight: 400;
     font-size: 1.25em;
-    transition: ease 0.5s;
+    // transition: ease 0.5s;
     text-decoration: none;
 }
 
@@ -58,7 +54,6 @@ a.navbar-item:focus {
 
 a.navbar-item:active {
     color: #c78943;
-    background-color: rgba(0,0,0,0.3);
 }
 
 .footer {

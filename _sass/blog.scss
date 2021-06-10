@@ -1,6 +1,6 @@
 // Fonts preferences
 
-// $sans-family: Roboto, sans-serif;
+$sans-family: Roboto, sans-serif;
 // $mono-family: Consolas, monospace;
 // $base-font-size: 16px;
 // $medium-font-size: $base-font-size * 0.938;
@@ -8,21 +8,16 @@
 // $base-line-height: 1.85;
 
 // Font weight
-// $light-weight: 300; // uncomment if necessary
-// $normal-weight: 400;
-// $bold-weight: 700;
-// $black-weight: 900; // uncomment if necessary
+$text-weight-light: 300;
+$text-weight-normal: 400;
+$text-weight-bold: 600;
 
+//Light theme
 
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
+$light-background-color: #f7f7f2;
+$light-text-color: #707471;
+$light-text-bold-color: #0d1017;
+$light-text-accent: #c78943;
 
 // Import sass files
 @import "fonts", "theme-light", "theme-dark", "dark-code", "social";
