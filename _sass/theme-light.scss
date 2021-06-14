@@ -28,7 +28,7 @@ body[theme="light"] {
 
     @media (hover: hover) {
         .side-about-img-overlay {
-            opacity: 0.9;
+            opacity: 0.95;
             transition: ease 1s;
         }
 
@@ -58,5 +58,17 @@ body[theme="light"] {
             transition: ease 1s;
             opacity: 0;
         }
+    }
+
+    .article-title-image {
+        opacity: 0.95;
+    }
+
+    .article-title-text {
+        color: $light-text-bold-color;
+    }
+
+    .content h1, h2, h3 {
+        color: $light-text-bold-color !important;
     }
 }

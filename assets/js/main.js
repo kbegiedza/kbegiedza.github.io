@@ -5,6 +5,7 @@ function onContentLoaded() {
 
     updateTheme(theme);
     addThemeToggle();
+
     fixRougeHightlighter();
     addActiveToggleToNavbarBurgers();
 }
@@ -15,6 +16,8 @@ function addThemeToggle() {
 }
 
 function updateTheme(theme) {
+    loadUtterances(theme)
+
     const toggle = document.getElementById('theme-toggle');
     const toggleIcon = toggle.getElementsByTagName('i')[0];
 
@@ -31,14 +34,7 @@ function updateTheme(theme) {
 }
 
 function swapTheme() {
-    let theme = localStorage.getItem('theme');
-
-    if (theme == 'dark') {
-        theme = 'light';
-    }
-    else {
-        theme = 'dark';
-    }
+    const theme = localStorage.getItem('theme') == 'dark' ? 'light' : 'dark';
 
     updateTheme(theme);
 }
@@ -70,5 +66,22 @@ function fixRougeHightlighter() {
         for (var j = 0; j < codeElements.length; ++j) {
             codeElements[j].setAttribute(codeLangKey, langName);
         }
+    }
+}
+
+function loadUtterances(theme) {
+    const container = document.getElementById("utterances");
+    if (container !== null) {
+        container.innerHTML = '';
+
+        const script = document.createElement("script");
+        script.setAttribute("src", "https://utteranc.es/client.js");
+        script.setAttribute("repo", "Ursanon/ursanon.github.io");
+        script.setAttribute("issue-term", "pathname");
+        script.setAttribute("theme", theme == 'dark' ? "dark-blue" : "github-light");
+        script.setAttribute("crossorigin", "anonymous");
+        script.setAttribute("async", "true");
+
+        container.appendChild(script);
     }
 }
