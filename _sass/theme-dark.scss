@@ -42,7 +42,6 @@ a.navbar-item {
     color: #c78943;
     font-weight: 400;
     font-size: 1.25em;
-    // transition: ease 0.5s;
     text-decoration: none;
 }
 
@@ -326,11 +325,11 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
 @media (hover: hover) {
     .side-about-img-overlay {
         opacity: 0.4;
-        transition: ease 1s;
+        transition: opacity ease 1s;
     }
 
     .side-about-img-overlay:hover {
-        transition: ease 1s;
+        transition: opacity ease 1s;
         opacity: 0.9;
     }
 }
@@ -506,11 +505,11 @@ a.is-social {
         background-color: black;
         border-top-left-radius: 7px;
         border-top-right-radius: 7px;
-        transition: ease 1s;
+        transition: opacity ease 1s;
     }
 
     .post-image-overlay:hover {
-        transition: ease 1s;
+        transition: opacity ease 1s;
         opacity: 0.1;
     }
 }

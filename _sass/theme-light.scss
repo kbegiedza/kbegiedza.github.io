@@ -29,33 +29,20 @@ body[theme="light"] {
     @media (hover: hover) {
         .side-about-img-overlay {
             opacity: 0.95;
-            transition: ease 1s;
         }
 
         .side-about-img-overlay:hover {
-            transition: ease 1s;
             opacity: 1;
         }
     }
 
     @media (hover: hover) {
         .post-image-overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
             opacity: 0.1;
             background-color: white;
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-            transition: ease 1s;
         }
 
         .post-image-overlay:hover {
-            transition: ease 1s;
             opacity: 0;
         }
     }

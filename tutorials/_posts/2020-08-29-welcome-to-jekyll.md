@@ -35,6 +35,47 @@ public void ChangeScene(int sceneIndex)
 }
 ```
 
+```c++
+#include <iostream>
+
+using std;
+
+int main()
+{
+  auto x = 1;
+  x++;
+  ++x;
+
+  int* ptr = new int[10];
+  delete ptr;
+  ptr = nullptr;
+}
+```
+
+```ruby
+class A < B; def self.create(object = User)
+class Zebra; def inspect; "X#{2 + self.object_id}"
+
+module ABC::DEF
+  include Comparable
+
+  # @param test
+  # @return [String] nothing
+  def foo(test)
+    Thread.new do |blockvar|
+      ABC::DEF.reverse(:a_symbol, :'a symbol', :<=>, 'test' + test)
+    end.join
+  end
+
+  def [](index) self[index] end
+  def ==(other) other == self end
+end
+
+anIdentifier = an_identifier
+Constant = 1
+render action: :new
+```
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
