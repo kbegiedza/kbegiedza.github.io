@@ -7,9 +7,11 @@ title: Categories
     <div class="container">
         <div class="columns is-centered is-variable is-8">
             <div class="column is-8">
-                <div>
+                <div class="tags are-medium">
                     {% for category in site.categories %}
-                    <a href="#{{ category[0] | slugify }}"> {{ category[0] }}</a>
+                    <span class="tag article-tag">
+                        <a href="#{{ category[0] | slugify }}"> {{ category[0] }}</a>
+                    </span>
                     {% endfor %}
                 </div>
                 <div class="divider"></div>
@@ -26,7 +28,6 @@ title: Categories
                         </li>
                         {% endfor %}
                     </ul>
-
                     {% endfor %}
                 </div>
             </div>

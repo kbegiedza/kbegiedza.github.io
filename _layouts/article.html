@@ -16,6 +16,14 @@ layout: default
                 <div class="content">
                     {{ content }}
 
+                    <div class="tags are-medium pt-4">
+                        {% for category_name in page.categories %}
+                            <span class="tag article-tag">
+                                <a href="/categories#{{category_name | downcase | slugify: 'latin' }}">{{ category_name }}</a>
+                            </span>
+                        {% endfor %}
+                    </div>
+
                     <div class="article-navi">
                         {% if page.previous.url %}
                         <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>

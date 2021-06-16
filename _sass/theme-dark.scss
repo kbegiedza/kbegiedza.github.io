@@ -22,6 +22,11 @@ a, a:link, a:visited {
     color: #c78943;
 }
 
+.tag {
+    a, a:link, a:visited {
+        color: #f2f2f2;
+    }
+}
 .navbar {
     background-color: #0d1017f5;
 }
@@ -139,6 +144,12 @@ a:hover {
     .article-title-text {
         font-size: 2.5em;
     }
+}
+
+.article-tag {
+    padding: 1em;
+    color: #f2f2f2 !important;
+    background-color: #c78943 !important;
 }
 
 .home-title-image {
