@@ -23,11 +23,11 @@ function updateTheme(theme) {
 
     if (theme == 'dark') {
         document.body.removeAttribute('theme')
-        toggleIcon.classList.replace('fas', 'far')
+        toggleIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill')
     }
     else {
         document.body.setAttribute('theme', theme)
-        toggleIcon.classList.replace('far', 'fas')
+        toggleIcon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill')
     }
 
     localStorage.setItem('theme', theme);
