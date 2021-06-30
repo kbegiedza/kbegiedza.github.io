@@ -496,11 +496,15 @@ a.is-social {
     padding: 0 1.33em 0 1.33em;
 }
 
-.post-date {
+.post-footer {
     font-size: 0.8em;
     color: #ffffff80;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.post-date {
+    color: #ffffff80;
 }
 
 @media (hover: hover) {
