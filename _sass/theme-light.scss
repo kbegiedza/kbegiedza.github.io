@@ -55,6 +55,10 @@ body[theme="light"] {
         color: $light-text-bold-color;
     }
 
+    .article-title-date {
+        color: $light-text-small-color;
+    }
+
     .content h1, h2, h3 {
         color: $light-text-bold-color !important;
     }
