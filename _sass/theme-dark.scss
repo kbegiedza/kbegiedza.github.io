@@ -361,15 +361,39 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
     color: #c78943 !important;
 }
 
-a.is-social {
-    margin: 0.1em;
-    margin-bottom: 0.4em;
-    text-decoration: none;
-    color: #f2f2f2;
+.is-social {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle !important;
 }
 
-.side-panel.is-social {
-    padding-bottom: 0.5em;
+.is-social.icon-bg {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+.is-social.icon-bg:hover {
+    color: #1d1f21;
+    border-color: #c78943;
+    background-color: #c78943;
+}
+
+a.is-social {
+    padding: 0 1px 1px;
+    font-size: 20pt;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    background-color: transparent;
 }
 
 @media (hover: hover) {
@@ -415,13 +439,6 @@ a.is-social {
 
 .is-subtext {
     font-size: 0.9em;
-}
-
-@media screen and (min-width: 1216px) {
-    .button.is-social {
-        border-radius: 2px;
-        font-size: 0.8rem;
-    }
 }
 
 #references.references {

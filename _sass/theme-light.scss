@@ -26,6 +26,14 @@ body[theme="light"] {
         border: 1px solid $light-border-color;
     }
 
+    .is-social.icon-bg {
+        color: $light-text-color;
+    }
+
+    .is-social.icon-bg:hover {
+        color: $light-background-color;
+    }
+
     @media (hover: hover) {
         .side-about-img-overlay {
             opacity: 0.95;
