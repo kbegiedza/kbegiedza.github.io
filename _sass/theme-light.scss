@@ -31,7 +31,7 @@ body[theme="light"] {
     }
 
     .is-social.icon-bg:hover {
-        color: $light-background-color;
+        color: $light-text-accent;
     }
 
     @media (hover: hover) {
@@ -72,6 +72,6 @@ body[theme="light"] {
     }
 
     .post-date {
-        color: #0d1017;
+        color: $light-text-minor;
     }
 }

@@ -361,39 +361,33 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
     color: #c78943 !important;
 }
 
-.is-social {
-    display: inline-block;
-    box-sizing: border-box;
-    vertical-align: middle !important;
-}
-
-.is-social.icon-bg {
-    display: block;
-    justify-content: center;
-    text-align: center;
-    width: 2.5rem;
-    height: 2.5rem;
-
-    border: 1px solid #f2f2f2;
-    border-radius: 4px;
-    background-color: transparent;
-    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
-}
-
-.is-social.icon-bg:hover {
-    color: #1d1f21;
-    border-color: #c78943;
-    background-color: #c78943;
-}
-
 a.is-social {
-    padding: 0 1px 1px;
-    font-size: 20pt;
-    color: #f2f2f2;
-    text-align: center;
+    margin: 0.1em;
+    font-size: 0.9em;
+    margin-bottom: 0.4em;
     text-decoration: none;
-    vertical-align: middle;
+    color: $light-text-accent;
+    border-color: $light-text-accent;
     background-color: transparent;
+    border-radius: 50%;
+}
+
+a.is-social:hover {
+    margin: 0.1em;
+    color: #14171c;
+    border-radius: 50%;
+    margin-bottom: 0.4em;
+    text-decoration: none;
+    border-color: $light-text-accent;
+    background-color: $light-text-accent;
+}
+
+.side-panel.is-social {
+    padding-bottom: 0.5em;
+}
+
+.is-large-text {
+    font-size: 1.333em;
 }
 
 @media (hover: hover) {
