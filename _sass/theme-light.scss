@@ -1,12 +1,5 @@
 body[theme="light"] {
-    display: flex;
-    min-height: 95vh;
-    overflow-x: hidden;
-    flex-direction: column;
-    background-size: cover;
     color: $light-text-color;
-    font-family: $sans-family;
-    font-weight: $text-weight-normal;
     background-color: $light-background-color;
 
     .navbar {
@@ -26,12 +19,8 @@ body[theme="light"] {
         border: 1px solid $light-border-color;
     }
 
-    .is-social.icon-bg {
-        color: $light-text-color;
-    }
-
-    .is-social.icon-bg:hover {
-        color: $light-text-accent;
+    a.is-social:hover {
+        color: $light-background-color;
     }
 
     @media (hover: hover) {
@@ -73,5 +62,9 @@ body[theme="light"] {
 
     .post-date {
         color: $light-text-minor;
+    }
+
+    .divider {
+        border-color: $light-text-small-color;
     }
 }

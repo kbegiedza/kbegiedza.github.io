@@ -1,14 +1,13 @@
 html, body {
-    color: #f2f2f2;
-    font-family: $sans-family;
-    font-weight: 400;
-    background-size: cover;
-    background-color: #0d1017;
-    overflow-x: hidden;
-
     display: flex;
     min-height: 95vh;
+    overflow-x: hidden;
     flex-direction: column;
+    background-size: cover;
+    color: $dark-text-color;
+    font-family: $sans-family;
+    font-weight: $text-weight-normal;
+    background-color: $dark-background-color;
 }
 
 .section {
@@ -16,19 +15,25 @@ html, body {
 }
 
 a, a:link, a:visited {
-    transition: color 0.5s ease;
+    color: $text-accent;
     text-decoration: none;
-
-    color: #c78943;
+    transition: color 0.5s ease;
 }
 
 .tag {
     a, a:link, a:visited {
-        color: #f2f2f2;
+        color: $dark-text-color;
     }
 }
+
+ul.is-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .navbar {
-    background-color: #0d1017f5;
+    background-color: $dark-navbar-background;
 }
 
 .navbar-menu {
@@ -43,40 +48,34 @@ div.navbar-brand > a.navbar-item:hover {
     filter: grayscale(0.35);
 }
 
-ul.is-unstyled {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 a.navbar-item {
-    color: #c78943;
-    font-weight: 400;
     font-size: 1.25em;
+    color: $text-accent;
     text-decoration: none;
+    font-weight: $text-weight-normal;
 }
 
 a.navbar-item:hover,
 a.navbar-item:focus {
-    color: #d5a874;
-    background-color: #0d1017;
+    color: $text-accent-light;
+    background-color: $dark-background-color;
 }
 
 a.navbar-item:active {
-    color: #c78943;
+    color: $text-accent;
 }
 
 .footer {
     padding-bottom: 3rem;
-    background-color: #0d1017;
+    background-color: $dark-background-color;
 }
 
 a:hover {
-    color: #d5a874;
+    color: $text-accent-light;
 }
 
 .content h1, h2, h3 {
-    color: #f2f2f2 !important;
+    color: $dark-text-color !important;
 }
 
 .content-title {
@@ -106,20 +105,18 @@ a:hover {
 }
 
 .article-title-text {
-    color: #c78943;
     font-size: 1.25em;
-    font-weight: 600;
+    color: $text-accent;
+    font-weight: $text-weight-bold;
 }
 
 .article-title-sub-text {
     font-size: 0.9em;
-    font-weight: 400;
 }
 
 .article-title-date {
-    color: #ffffff80;
+    color: $dark-text-small-color;
     font-size: 0.75em;
-    font-weight: 400;
 }
 
 .article-title-content {
@@ -127,11 +124,11 @@ a:hover {
 }
 
 .article-title-content-tags {
-    pointer-events:none;
-    position: absolute;
     top: 1em;
     right: 1em;
-    color: #f2f2f2;
+    position: absolute;
+    pointer-events:none;
+    color: $dark-text-color;
 }
 
 @media (min-width: 768px) {
@@ -156,76 +153,8 @@ a:hover {
 
 .article-tag {
     padding: 1em;
-    color: #f2f2f2 !important;
-    background-color: #c78943 !important;
-}
-
-.home-title-image {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.home-top-title-image {
-    display: block;
-    opacity: 0.7;
-    border-radius: 4px;
-}
-
-.home-title-image {
-    display: block;
-    opacity: 0.7;
-    border-radius: 4px;
-}
-
-.home-title-text {
-    font-size: 1em;
-}
-
-.home-title-sub-text {
-    font-size: 0.9em;
-    font-weight: 400;
-}
-
-.home-title-date {
-    padding-top: 1em;
-    font-size: 0.75em;
-    font-weight: 400;
-}
-
-.home-title-content {
-    pointer-events:none;
-    padding: 1.33333rem;
-    color: #f2f2f2;
-}
-
-.home-title-content-tags {
-    pointer-events:none;
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    color: #f2f2f2;
-}
-
-@media (min-width: 768px) {
-    .home-title-date {
-        font-size: 0.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .home-title-text {
-        font-size: 1em;
-    }
-
-    .home-title-sub-text {
-        font-size: 0.75em;
-    }
-
-    .home-title-date {
-        font-size: 0.75em;
-    }
+    color: $dark-text-color !important;
+    background-color: $text-accent !important;
 }
 
 ::-webkit-scrollbar {
@@ -260,20 +189,12 @@ a:hover {
   background: transparent;
 }
 
-.mail-list-text {
-    font-size: 1.5em;
-}
-
-.mail-list-input {
-    padding: 5px;
-}
-
 .mail-list {
     margin-top: 3em;
     margin-bottom: 1em;
     background: #14171c;
     border-radius: 4px;
-    border: 1px solid #1d1f21;
+    border: 1px solid $dark-border-color;
 }
 
 .comments {
@@ -287,22 +208,22 @@ a:hover {
 a.is-secondary,.is-secondary,.is-secondary:focus {
     transition: ease .5s;
 
-    color: #f2f2f2;
-    background: #c78943;
-    border: 1px solid #c78943;
+    color: $dark-text-color;
+    background: $text-accent;
+    border: 1px solid $text-accent;
 }
 
 .is-secondary:hover
 {
-    color: #f2f2f2;
-    background: #d5a874;
-    border: 1px solid #d5a874;
+    color: $dark-text-color;
+    background: $text-accent-light;
+    border: 1px solid $text-accent-light;
 }
 
 .is-secondary:active {
-    color: #f2f2f2;
-    background: #d5a874;
-    border: 1px solid #14171c;
+    color: $dark-text-color;
+    background: $text-accent-light;
+    border: 1px solid $dark-text-minor;
 }
 
 .article-navi {
@@ -322,17 +243,17 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
 }
 
 .side-panel {
+    font-size: 0.95em;
     margin-bottom: 2em;
     padding: 0em 1em 0.2em;
-    border-left: 5px solid #c78943;
-    font-size: 0.95em;
+    border-left: 5px solid $text-accent;
 }
 
 .side-panel p.is-header {
-    color: #c78943;
-    font-weight: 600;
     font-size: 1.2em;
+    color: $text-accent;
     margin-bottom: 0.6666em;
+    font-weight: $text-weight-bold;
 }
 
 @media screen and (max-width: 767px), print {
@@ -348,38 +269,34 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
     }
 
     .side-about-img-overlay:hover {
-        transition: opacity ease 1s;
         opacity: 0.9;
+        transition: opacity ease 1s;
     }
 }
 
 .accent-text {
-    color: #c78943 !important;
+    color: $text-accent !important;
 }
 
 .side-panel-header {
-    color: #c78943 !important;
+    color: $text-accent !important;
 }
 
 a.is-social {
     margin: 0.1em;
     font-size: 0.9em;
+    border-radius: 50%;
+    color: $text-accent;
     margin-bottom: 0.4em;
     text-decoration: none;
-    color: $light-text-accent;
-    border-color: $light-text-accent;
+    border-color: $text-accent;
     background-color: transparent;
-    border-radius: 50%;
 }
 
 a.is-social:hover {
-    margin: 0.1em;
-    color: #14171c;
-    border-radius: 50%;
-    margin-bottom: 0.4em;
-    text-decoration: none;
-    border-color: $light-text-accent;
-    background-color: $light-text-accent;
+    border-color: $text-accent;
+    color: $dark-background-color;
+    background-color: $text-accent;
 }
 
 .side-panel.is-social {
@@ -390,48 +307,7 @@ a.is-social:hover {
     font-size: 1.333em;
 }
 
-@media (hover: hover) {
-    .home-image-overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0.6;
-        background-color: black;
-        border-radius: 4px;
-        transition: ease 1s;
-    }
-
-    .home-image-overlay:hover {
-        transition: ease 1s;
-        opacity: 0.1;
-    }
-}
-
-.home-tile {
-    height: 100%;
-    border-radius: 10px;
-
-    position: relative;
-    display: inline-block;
-}
-
-.home-top-tile {
-    border-radius: 10px;
-
-    position: relative;
-    display: inline-block;
-}
-
-.home-text {
-    opacity: 0.9;
-    color: #f2f2f2;
-}
-
-.is-subtext {
+.is-small-text {
     font-size: 0.9em;
 }
 
@@ -470,13 +346,13 @@ a.is-social:hover {
 }
 
 .post-tile {
-    border-radius: 7px;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    border: 1px solid #1d1f21;
     flex-grow: 1;
-    flex-direction: column;
     display: flex;
+    margin-left: 0.5em;
+    border-radius: 7px;
+    margin-right: 0.5em;
+    flex-direction: column;
+    border: 1px solid $dark-border-color;
 }
 
 .post-image {
@@ -517,13 +393,13 @@ a.is-social:hover {
 
 .post-footer {
     font-size: 0.8em;
-    color: #ffffff80;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: $dark-text-small-color;
 }
 
 .post-date {
-    color: #ffffff80;
+    color: $dark-text-small-color;
 }
 
 @media (hover: hover) {
@@ -549,11 +425,7 @@ a.is-social:hover {
 }
 
 .divider {
+    height: 0.5px;
     margin: 1em 0 1em 0;
-    height: 1px;
-    border: solid #f2f2f2 1px;
-}
-
-.is-small-text {
-    font-size: 0.9em;
+    border: solid $dark-text-small-color 1px;
 }

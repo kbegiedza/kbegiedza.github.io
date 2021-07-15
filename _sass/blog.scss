@@ -12,15 +12,25 @@ $text-weight-light: 300;
 $text-weight-normal: 400;
 $text-weight-bold: 600;
 
-//Light theme
+//Dark theme
+$dark-text-color: #f2f2f2;
+$dark-text-minor: #14171c;
+$dark-border-color: #1d1f21;
+$dark-background-color: #0d1017;
+$dark-text-small-color: #ffffff80;
+$dark-navbar-background: #0d1017f5;
 
+//Light theme
 $light-background-color: #f7f7f2;
 $light-border-color: #e1e4e8;
 $light-text-small-color: #707471;
 $light-text-color: #3a4145;
 $light-text-bold-color: #2e2e2e;
 $light-text-minor: #0d1017;
-$light-text-accent: #c78943;
+
+//Standard colors
+$text-accent: #c78943;
+$text-accent-light: #d5a874;
 
 // Import sass files
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");

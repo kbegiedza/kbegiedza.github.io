@@ -35,6 +35,14 @@ public void ChangeScene(int sceneIndex)
 }
 ```
 
+Turducken brisket pig chuck<sup>[<a href="#references">1</a>]</sup>. Strip steak pork loin burgdoggen, tri-tip brisket venison turkey pork alcatra ham hock ground round. Pork ground round alcatra filet mignon strip steak hamburger bacon pork belly cow landjaeger. Sirloin salami brisket bresaola jowl kevin porchetta chicken. Ribeye turkey tri-tip sausage, buffalo salami doner leberkas alcatra cow frankfurter ground round sirloin shoulder chislic.
+
+{:id="references" .references }
+### References
+
+1.  Begiedza K. [Title of article, book or other medium](https://kbegiedza.eu/). 2020
+2.  Laaksonen DE, Nuutinen J, Lahtinen T, Rissanen A, Niskanen LK. [Changes in abdominal subcutaneous fat water content with rapid weight loss and long-term weight maintenance in abdominally obese men and women](https://www.google.com/). *International Journal of Obesity*. 2003
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
