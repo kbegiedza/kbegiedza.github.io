@@ -5,13 +5,18 @@
         <p>
             Handcrafted with ❤️ by <a href="https://kbegiedza.eu/">Krzysztof Begiedza</a>.
         </p>
-        <div class="is-subtext">
+        <div class="is-small-text">
             © {{ start_date }}
             {% if start_date != current_date %}
             - {{ current_date }}
             {% endif %}
             | <a href="/legal/privacy">Privacy policy</a>
             | <a href="/sitemap.xml">Site map</a>
+            | <a href="/feed.xml">
+                <span class="icon">
+                    <i class="bi bi-rss-fill"></i>
+                </span>
+            </a>
         </div>
     </div>
 </footer>

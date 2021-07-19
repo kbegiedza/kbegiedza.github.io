@@ -1,0 +1,70 @@
+body[theme="light"] {
+    color: $light-text-color;
+    background-color: $light-background-color;
+
+    .navbar {
+        background-color: $light-background-color;
+    }
+
+    a.navbar-item:hover,
+    a.navbar-item:focus {
+        background-color: $light-background-color;
+    }
+
+    .footer {
+        background-color: $light-background-color;
+    }
+
+    .post-tile {
+        border: 1px solid $light-border-color;
+    }
+
+    a.is-social:hover {
+        color: $light-background-color;
+    }
+
+    @media (hover: hover) {
+        .side-about-img-overlay {
+            opacity: 0.95;
+        }
+
+        .side-about-img-overlay:hover {
+            opacity: 1;
+        }
+    }
+
+    @media (hover: hover) {
+        .post-image-overlay {
+            opacity: 0.1;
+            background-color: white;
+        }
+
+        .post-image-overlay:hover {
+            opacity: 0;
+        }
+    }
+
+    .article-title-image {
+        opacity: 0.95;
+    }
+
+    .article-title-text {
+        color: $light-text-bold-color;
+    }
+
+    .article-title-date {
+        color: $light-text-small-color;
+    }
+
+    .content h1, h2, h3 {
+        color: $light-text-bold-color !important;
+    }
+
+    .post-date {
+        color: $light-text-minor;
+    }
+
+    .divider {
+        border-color: $light-text-small-color;
+    }
+}

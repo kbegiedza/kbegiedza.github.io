@@ -2,6 +2,7 @@ author: Krzysztof Begiedza
 title: Blog - Krzysztof Begiedza
 description: Blog - Krzysztof Begiedza
 encoding: utf-8
+mode: dark
 
 permalink: /:title
 
@@ -16,15 +17,18 @@ kramdown:
     syntax_highlighter: rouge
     math_engine: mathjax
 
+# Collections dir
 collections_dir: tutorials
 collections:
-    zero:
-        output: true
-        permalink: /:collection/:name
     one:
         output: true
-        permalink: /:collection/:name
+        permalink: /:collection/:title
 
 plugins:
     - jekyll-feed
     - jekyll-sitemap
+
+exclude:
+    - "CNAME"
+    - "Dockerfile"
+    - "README.md"

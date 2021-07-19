@@ -1,123 +1,10 @@
 ---
-layout: default
+layout: home
 title: Krzysztof Begiedza - Blog
 description: Description
 ---
 
 {% assign recent_posts = site.posts | sort: 'date' | reverse %}
-
-<!-- post feed -->
-<style>
-    .post-feed {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .post {
-        padding-bottom: 1em;
-        width: 100%;
-        flex: 0 0 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    @media (min-width: 1024px) {
-        .post {
-            width: 50%;
-            flex: 0 0 50%;
-        }
-    }
-
-    .post-tile {
-        border-radius: 7px;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        border: 1px solid #1d1f21;
-        flex-grow: 1;
-        flex-direction: column;
-        display: flex;
-    }
-
-    .post-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
-    }
-
-    .post-image-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .post article {
-        padding: 1.33em;
-        flex-grow: 1;
-    }
-
-    .post-title {
-        padding-bottom: 1em;
-        font-size: 1.33em;
-        font-weight: bold;
-    }
-
-    .post-desc {
-        font-size: 1em;
-    }
-
-    .post footer {
-        margin-bottom: 1.33em;
-        padding: 0 1.33em 0 1.33em;
-    }
-
-    .post-date {
-        font-size: 0.8em;
-        color: #ffffff80;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-    }
-
-    @media (hover: hover) {
-        .post-image-overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0.6;
-            background-color: black;
-            border-top-left-radius: 7px;
-            border-top-right-radius: 7px;
-            transition: ease 1s;
-        }
-
-        .post-image-overlay:hover {
-            transition: ease 1s;
-            opacity: 0.1;
-        }
-    }
-</style>
-
-<!-- landing hero -->
-<style>
-</style>
-
-<section class="hero">
-    <div class="hero-body has-text-centered">
-        <div class="container">
-            <h1 class="title">
-                Hero title
-            </h1>
-            <h2 class="subtitle">
-                Hero subtitle
-            </h2>
-        </div>
-    </div>
-</section>
 
 <div class="post-feed">
     {% for post in recent_posts limit: 4 %}
@@ -143,9 +30,8 @@ description: Description
                 </p>
             </article>
             <footer>
-                <p class="post-date">
-                    {% include post-date.html date=post.date %}
-                </p>
+                <span class="post-footer post-date">{{ post.date | date: "%d %b %Y" }}</span>
+                <a class="post-footer" href="{{ post.url }}">Read more »</a>
             </footer>
         </div>
     </article>
