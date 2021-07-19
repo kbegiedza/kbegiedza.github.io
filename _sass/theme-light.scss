@@ -1,14 +1,18 @@
+html[theme="light"] {
+    background-color: $light-background-color;
+}
+
 body[theme="light"] {
     color: $light-text-color;
     background-color: $light-background-color;
 
     .navbar {
-        background-color: $light-background-color;
+        background-color: $light-navbar-background;
     }
 
     a.navbar-item:hover,
     a.navbar-item:focus {
-        background-color: $light-background-color;
+        background-color: $light-navbar-background;
     }
 
     .footer {
