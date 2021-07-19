@@ -1,13 +1,6 @@
-// Fonts preferences
-
+// Fonts
 $sans-family: Roboto, sans-serif;
-// $mono-family: Consolas, monospace;
-// $base-font-size: 16px;
-// $medium-font-size: $base-font-size * 0.938;
-// $small-font-size: $base-font-size * 0.875;
-// $base-line-height: 1.85;
-
-// Font weight
+$mono-family: monospace, monospace;
 $text-weight-light: 300;
 $text-weight-normal: 400;
 $text-weight-bold: 600;
@@ -34,4 +27,4 @@ $text-accent-light: #d5a874;
 
 // Import sass files
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
-@import "fonts", "theme-light", "theme-dark", "dark-code", "light-code";
+@import "theme-light", "theme-dark", "dark-code", "light-code";

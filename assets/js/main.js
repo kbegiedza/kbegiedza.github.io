@@ -60,8 +60,8 @@ function fixRougeHightlighter() {
 
     for (var i = 0; i < allHighlightedCode.length; ++i) {
         const highlightedCode = allHighlightedCode[i];
-        const langName = highlightedCode.classList[0].replace('language-', '');
         const codeElements = highlightedCode.getElementsByTagName('code');
+        const langName = highlightedCode.classList[0].replace('language-', '');
 
         for (var j = 0; j < codeElements.length; ++j) {
             codeElements[j].setAttribute(codeLangKey, langName);
@@ -71,6 +71,7 @@ function fixRougeHightlighter() {
 
 function loadUtterances(theme) {
     const container = document.getElementById("utterances");
+
     if (container !== null) {
         container.innerHTML = '';
 
