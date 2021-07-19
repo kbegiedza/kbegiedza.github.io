@@ -1,13 +1,23 @@
 document.addEventListener('DOMContentLoaded', onContentLoaded);
 
 function onContentLoaded() {
-    const theme = localStorage.getItem('theme');
+    const theme = initalizeTheme();
 
     updateTheme(theme);
     addThemeToggle();
 
     fixRougeHightlighter();
     addActiveToggleToNavbarBurgers();
+}
+
+function initalizeTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === null) {
+        return 'dark';
+    }
+
+    return theme;
 }
 
 function addThemeToggle() {
