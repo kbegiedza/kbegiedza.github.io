@@ -158,16 +158,16 @@ a:hover {
 }
 
 ::-webkit-scrollbar {
-  width: .75em;
-  height: .75em;
+    width: .75em;
+    height: .75em;
 }
 ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+    width: 0px;
+    height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.75);
@@ -186,7 +186,7 @@ a:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 ::-webkit-scrollbar-corner {
-  background: transparent;
+    background: transparent;
 }
 
 .mail-list {

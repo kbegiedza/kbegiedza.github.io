@@ -33,10 +33,12 @@ function updateTheme(theme) {
 
     if (theme == 'dark') {
         document.body.removeAttribute('theme')
+        document.documentElement.removeAttribute('theme')
         toggleIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill')
     }
     else {
         document.body.setAttribute('theme', theme)
+        document.documentElement.setAttribute('theme', theme)
         toggleIcon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill')
     }
 
