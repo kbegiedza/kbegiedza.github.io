@@ -283,18 +283,15 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
 }
 
 a.is-social {
-    margin: 0.1em;
-    font-size: 0.9em;
-    border-radius: 50%;
+    border: 0;
+    font-size: 1em;
     color: $text-accent;
     margin-bottom: 0.4em;
     text-decoration: none;
-    border-color: $text-accent;
     background-color: transparent;
 }
 
 a.is-social:hover {
-    border-color: $text-accent;
     color: $dark-background-color;
     background-color: $text-accent;
 }
