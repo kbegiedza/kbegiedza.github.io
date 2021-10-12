@@ -18,7 +18,7 @@ figure.highlight,
     border: 1px solid #1d1f21;
     color: #D4D4D4;
     font-family: $mono-family;
-    font-size: 1em;
+    font-size: 0.9rem;
   }
 
 .highlight pre {
@@ -32,7 +32,7 @@ pre.highlight {
 pre > code:before {
     opacity: 0.5;
     display: block;
-    font-size: 0.9em;
+    font-size: 0.95em;
     text-transform: capitalize;
     content: " "attr(data-lang);
   }
@@ -71,7 +71,7 @@ pre > code:before {
 .highlight .nn { color: #4EC9B0 } /* Name.Namespace */
 .highlight .nx { color: #4EC9B0 } /* Name.Other */
 .highlight .py { color: #569cd6 } /* Name.Property */
-.highlight .nt { color: #f92672 } /* Name.Tag */
+.highlight .nt { color: #569cd6 } /* Name.Tag */
 .highlight .nv { color: #D4D4D4 } /* Name.Variable */
 .highlight .w { color: #569cd6 } /* Text.Whitespace */
 .highlight .ow { color: #f92672 } /* Operator.Word */
