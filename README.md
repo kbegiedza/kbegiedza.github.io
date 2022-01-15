@@ -1,1 +1,1 @@
-# ursanon.github.io
+# blog.kbegiedza.eu
