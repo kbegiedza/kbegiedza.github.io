@@ -89,7 +89,7 @@ function loadUtterances(theme) {
 
         const script = document.createElement("script");
         script.setAttribute("src", "https://utteranc.es/client.js");
-        script.setAttribute("repo", "Ursanon/ursanon.github.io");
+        script.setAttribute("repo", "kbegiedza/kbegiedza.github.io");
         script.setAttribute("issue-term", "pathname");
         script.setAttribute("theme", theme == 'dark' ? "dark-blue" : "github-light");
         script.setAttribute("crossorigin", "anonymous");
