@@ -74,7 +74,7 @@ or use code below if CUDA is optional:
 enable_language(CUDA)
 ```
 
-Now you can configure, build and run your project with CUDA on board.
+Now you can select your kit (Clang for instance), configure, build and run your project with CUDA on board.
 
 ### Further reading
 Using this knowledge you can go deep and experiment with:
