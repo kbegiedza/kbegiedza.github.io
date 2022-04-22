@@ -8,7 +8,7 @@ description: Publishing your project as nuget package can seems difficult for ne
 categories: dotnet devops nuget
 ---
 
-Publishing your project as nuget package can seems difficult for new developers, but it's really quite simple task. In this article I'll use my demo repo with simple progress bar for C#, which can be found [on GitHub](https://github.com/Ursanon/SharpBar) to guide you.
+Publishing your project as nuget package can seems difficult for new developers, but it's really quite simple task. In this article I'll use my demo repo with simple progress bar for C#, which can be found [on GitHub](https://github.com/kbegiedza/SharpBar) to guide you.
 
 ### Practicies
 
@@ -38,7 +38,7 @@ Below you can find part of properly configured `.csproj` file.
   <Version>1.0.0</Version>
   <AssemblyVersion>1.0.0.0</AssemblyVersion>
   <FileVersion>1.0.0</FileVersion>
-  <RepositoryUrl>https://github.com/Ursanon/SharpBar.git</RepositoryUrl>
+  <RepositoryUrl>https://github.com/kbegiedza/SharpBar.git</RepositoryUrl>
 
   <PackageId>SharpBar</PackageId>
   <PackageIcon>icon128.png</PackageIcon>
