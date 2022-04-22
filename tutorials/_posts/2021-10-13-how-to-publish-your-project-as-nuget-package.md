@@ -1,8 +1,8 @@
 ---
 layout: article
 date: 2021-10-13 20:44:20 +0200
-thumbnail: /assets/img/20211013/package-title-sm.png
-title-image: /assets/img/20211013/package-title.png
+thumbnail: /assets/img/20211013/post-title-sm.png
+title-image: /assets/img/20211013/post-title.png
 title: How to publish your project as nuget package
 description: Publishing your project as nuget package can seems difficult for new developers, but it's quite simple task.
 categories: dotnet devops nuget
