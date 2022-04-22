@@ -1,18 +1,19 @@
 ---
 layout: article
 date: "2022-04-17"
-thumbnail: /assets/img/placeholder/title-sm.png
-title-image: /assets/img/placeholder/title.png
-title: Setup CUDA development with vscode
-description: Descriptions.
+thumbnail: /assets/img/20220417/post-title-sm.png
+title-image: /assets/img/20220417/post-title.png
+title: Containerization of CUDA environment using VSCode
+description: Create flexible and portable environment for your next CUDA project inside remote container.
 categories: CUDA devops C++
 ---
 
-So you want to dive deep into CUDA and C++ world.
-It can be nasty place with hard to understand environment configuration, but fear not there is glimpse of light here...
+### Abstract
+
+If you have some experience with programming you know how complicated and error prone setup of new dev environment can be, especially if you are using technologies, without built-in package management system (for&nbsp;instance pip or NuGet), like C or C++. When you add more and more dependencies to your project it can be really tough to move it around and onboard new developer to your team.
 
 Imagine that you can pack every dependency into some kind of bag, open it basically everywhere and focus on coding instead of installing everything from scratch.
-You can utilize docker and vscode to prepare your own portable development environment in minutes.
+To achieve above you can utilize Docker and VSCode with officially supported by Microsoft Remote Containers extension.
 
 ### Host requirements
 * CUDA-enabled device
