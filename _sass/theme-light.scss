@@ -4,18 +4,23 @@ html[theme="light"] {
     ::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.1);
     }
+
     ::-webkit-scrollbar-thumb:hover {
         background: rgba(0, 0, 0, 0.2);
     }
+
     ::-webkit-scrollbar-thumb:active {
         background: rgba(0, 0, 0, 0.2);
     }
+
     ::-webkit-scrollbar-track {
         background: rgba(0, 0, 0, 0.1);
     }
+
     ::-webkit-scrollbar-track:hover {
         background: rgba(0, 0, 0, 0.15);
     }
+
     ::-webkit-scrollbar-track:active {
         background: rgba(0, 0, 0, 0.15);
     }
@@ -79,7 +84,9 @@ body[theme="light"] {
         color: $light-text-small-color;
     }
 
-    .content h1, h2, h3 {
+    .content h1,
+    h2,
+    h3 {
         color: $light-text-bold-color !important;
     }
 
