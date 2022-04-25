@@ -35,10 +35,9 @@ You're almost there, now put into `devcontainer.json` content below:
 ```jsonc
 {
     "name": "C++",
-    // TODO: use ulf store
-    "image": "ghcr.io/harbourb/cuda/sdk-vscode:11.6.0",
+    "image": "ghcr.io/ulfsoft-harbour/cuda/sdk-vscode:11.6.0",
     "runArgs": [
-        // we want to work with CUDA, so we need gpu device inside container
+        // you have to pass what gpu you wan to CUDA interact with
         "--gpus=all",
         // add capacity and security-opt to enable debugging inside container
         "--cap-add=SYS_PTRACE",
