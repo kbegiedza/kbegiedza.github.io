@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     display: flex;
     min-height: 95vh;
     font-size: 1.05em;
@@ -15,14 +16,19 @@ html, body {
     flex: 1;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
     color: $text-accent;
     text-decoration: none;
     transition: color 0.5s ease;
 }
 
 .tag {
-    a, a:link, a:visited {
+
+    a,
+    a:link,
+    a:visited {
         color: $dark-text-color;
     }
 }
@@ -41,11 +47,11 @@ ul.is-unstyled {
     background-color: transparent;
 }
 
-div.navbar-brand > a.navbar-item {
+div.navbar-brand>a.navbar-item {
     transition: filter 0.5s ease;
 }
 
-div.navbar-brand > a.navbar-item:hover {
+div.navbar-brand>a.navbar-item:hover {
     filter: grayscale(0.35);
 }
 
@@ -75,7 +81,9 @@ a:hover {
     color: $text-accent-light;
 }
 
-.content h1, h2, h3 {
+.content h1,
+h2,
+h3 {
     color: $dark-text-color !important;
 }
 
@@ -101,7 +109,7 @@ a:hover {
 }
 
 .article-title-image {
-    opacity: 0.7;
+    opacity: 0.9;
     border-radius: 4px;
 }
 
@@ -128,7 +136,7 @@ a:hover {
     top: 1em;
     right: 1em;
     position: absolute;
-    pointer-events:none;
+    pointer-events: none;
     color: $dark-text-color;
 }
 
@@ -162,30 +170,38 @@ a:hover {
     width: .75em;
     height: .75em;
 }
+
 ::-webkit-scrollbar-button {
     width: 0px;
     height: 0px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.75);
 }
+
 ::-webkit-scrollbar-thumb:active {
     background: rgba(0, 0, 0, 0.75);
 }
+
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 50px;
 }
+
 ::-webkit-scrollbar-track:hover {
     background: rgba(0, 0, 0, 0.3);
 }
+
 ::-webkit-scrollbar-track:active {
     background: rgba(0, 0, 0, 0.3);
 }
+
 ::-webkit-scrollbar-corner {
     background: transparent;
 }
@@ -206,7 +222,9 @@ a:hover {
     word-spacing: .2em;
 }
 
-a.is-secondary,.is-secondary,.is-secondary:focus {
+a.is-secondary,
+.is-secondary,
+.is-secondary:focus {
     transition: ease .5s;
 
     color: $dark-text-color;
@@ -214,8 +232,7 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
     border: 1px solid $text-accent;
 }
 
-.is-secondary:hover
-{
+.is-secondary:hover {
     color: $dark-text-color;
     background: $text-accent-light;
     border: 1px solid $text-accent-light;
@@ -239,6 +256,7 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
     float: left;
     margin: 1em 0;
 }
+
 .article-navi .next {
     text-align: right;
 }
@@ -257,7 +275,8 @@ a.is-secondary,.is-secondary,.is-secondary:focus {
     font-weight: $text-weight-bold;
 }
 
-@media screen and (max-width: 767px), print {
+@media screen and (max-width: 767px),
+print {
     .columns {
         padding: 1em;
     }
@@ -318,7 +337,7 @@ a.is-social:hover {
     text-align: center;
 }
 
-.post-image>img{
+.post-image>img {
     height: auto;
     max-width: 75%;
 }
