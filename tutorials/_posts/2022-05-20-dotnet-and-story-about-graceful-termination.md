@@ -4,13 +4,11 @@ date: "2022-05-20"
 thumbnail: /assets/img/placeholder/title-sm.png
 title-image: /assets/img/placeholder/title.png
 title: Story about graceful termination with .NET
-description: Graceful termination of .NET based pods in kubernetes environment
-categories: dotnet devops
+description: Graceful termination of .NET based pods in Kubernetes environment
+categories: dotnet devops kubernetes
 ---
 
 ### Abstract
-
-In modern dotnet you have multiple ways to host your application.
 
 Pods represents processes running on nodes in the cluster, so it is important to make sure each can gracefully terminate.
 To achieve above container runtime sends `STOP` or `TERM` signal (depends on used runtime) followed by `KILL` signal after grace period of time.
@@ -20,21 +18,28 @@ spec:
     terminationGracePeriodSeconds: 60
 ```
 
-You can use `preStop` Kubernetes hook to execute command to manage lifetime of your app inside pod before it enters into `Terminated` phase.
-This is great way to shut down system you don't have control over and cannot adjust it to handle signals.
+You can utilize `preStop` Kubernetes hook and execute command to manage lifetime of your app inside pod before it enters into `Terminated` phase.
+This is a great way to shutdown system you don't have control over, thus cannot adjust to handle signals or you want to synchronize shutdown of multiple containers.
+```yaml
+spec:
+  containers:
+  - name: sidecar
+    image: busybox
+    lifecycle:
+      preStop:
+        exec:
+          command: [ "/bin/sh", "-c", "echo 'Executing PreStop hook'" ]
+```
 
+Another way to handle termination gracefully is to observe and react to described previously system signals sent down directly to process by container runtime and this post is all about how to do it with .NET 6 and ASP.NET Core 6.0.
 
-Regardless which method described above you choose, you have to make sure that it ends its execution before defined `terminationGracePeriodSeconds`.
-Otherwise your pod will be killed
+Regardless of which described above method you choose, you have to make sure that it finishes its execution before defined `terminationGracePeriodSeconds`,
+otherwise your pod will be force killed by runtime.
 
-### Requirements
+### Graceful termination in .NET
 
-* Kubernetes cluster
-
-### Requirements
-
-A co z error code ?
-A co się stanie jak będzie force kill ? 
+1. Console app -> without host
+2. Host-based
 
 ### Further reading
 
