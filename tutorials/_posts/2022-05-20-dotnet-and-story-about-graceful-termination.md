@@ -8,10 +8,6 @@ description: Graceful termination of .NET based pods in kubernetes environment
 categories: dotnet devops
 ---
 
-https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
-https://blog.markvincze.com/graceful-termination-in-kubernetes-with-asp-net-core/
-https://www.thinktecture.com/en/asp-net-core/aspnet-core-in-production-graceful-shutdown-and-reacting-to-aborted-requests/
-
 ### Abstract
 
 In modern dotnet you have multiple ways to host your application.
