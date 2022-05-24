@@ -38,8 +38,20 @@ otherwise your pod will be force killed by runtime.
 
 ### Graceful termination in .NET
 
-1. Console app -> without host
-2. Host-based
+
+#### Fast and simple way
+
+Your first idea for simple console app could be "Fine! I'll do it all by myself!", then you will search for some nasty `Mono`-based hacks or you will have to attach to events like `Console.CancelKeyPress` (works fine on paper and your computer, not so much inside pod) or utilize application domain's parent process and attach to `AppDomain.CurrentDomain.ProcessExit` event. Second approach will get things done, but you deserve better...
+
+#### Proper way
+
+<!-- history of adding: `Microsoft.Extensions.Hosting` -->
+
+Before .NET 6, POSIX signals was not fully supported, to handle `SIGTERM` was used previously mentioned `AppDomain.CurrentDomain.ProcessExit` which could raise potential [issues](https://github.com/dotnet/runtime/issues/50397) related with usage of `Environment.Exit`.
+
+1. [Host-based](https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host)
+
+Some example with controller and pending request ??
 
 ### Further reading
 
