@@ -41,15 +41,57 @@ otherwise your pod will be force killed by runtime.
 
 #### Fast and simple way
 
-Your first idea for simple console app could be "Fine! I'll do it all by myself!", then you will search for some nasty `Mono`-based hacks or you will have to attach to events like `Console.CancelKeyPress` (works fine on paper and your computer, not so much inside pod) or utilize application domain's parent process and attach to `AppDomain.CurrentDomain.ProcessExit` event. Second approach will get things done, but you deserve better...
+Your first idea for simple console app could be "Fine! I'll do it all by myself!", then you will search for some nasty `Mono`-based hacks or you will have to attach to events like `Console.CancelKeyPress` (works fine on paper and your computer, not so much inside pod) or utilize application domain's parent process and attach to `AppDomain.CurrentDomain.ProcessExit` event.
 
-#### Proper way
+Second approach will get things done and will result with following code
+```C#
+protected override async Task ExecuteAsync()
+{
+    AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
+}
 
-<!-- history of adding: `Microsoft.Extensions.Hosting` -->
+private void OnProcessExit(object? sender, EventArgs e)
+{
+    Console.WriteLine($"Got {nameof(OnProcessExit)}");
+}
+```
 
-Before .NET 6, POSIX signals was not fully supported, to handle `SIGTERM` was used previously mentioned `AppDomain.CurrentDomain.ProcessExit` which could raise potential [issues](https://github.com/dotnet/runtime/issues/50397) related with usage of `Environment.Exit`.
+As expected you will get output like one below:
+```
+Starting: 'ConsoleEventsRunner'.
+Got OnProcessExit
+```
 
-1. [Host-based](https://docs.microsoft.com/en-us/dotnet/core/extensions/generic-host)
+But... you deserve better!
+
+#### Host-based console application
+
+Much better approach, even for simple console application, is to utilize modern .NET extensions like `Hosting`, `Logging` and `DependencyInjection`, all three could be added to your project by single [`Microsoft.Extensions.Hosting` package reference](https://www.nuget.org/packages/Microsoft.Extensions.Hosting). This allows you to use feature-rich host lifetime, production ready dependency injection container and great logging framework out-of-the-box while reducing boilerplate code.
+After adding above package to project, you should create new host builder, configure it to fit your needs then build it.
+It's highly recommended to take a look at [configuration](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration) and [dependency injection](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection) if your aren't familiar with above concepts, it will make your life easier.
+
+```Csharp
+using var host = Host.CreateDefaultBuilder()
+                     .ConfigureServices(services =>
+                     {
+                        // Add your services to DI container
+                        services.AddHostedService<ImportantService>();
+                     })
+                     .Build();
+
+await host.RunAsync();
+```
+
+Once you have your host ready, you can experiment with 
+
+Before .NET 6, POSIX signals was not fully supported, to handle `SIGTERM` was used previously mentioned `AppDomain.CurrentDomain.ProcessExit` what could raise potential [issues](https://github.com/dotnet/runtime/issues/50397) related with usage of `Environment.Exit`.
+
+You can add graceful shutdown support to your container much easier by injecting `IHostApplicationLifetime` interface, which can be found inside `Microsoft.Extensions.Hosting` package, into your service or controller and then registering delegate that will be called when shutdown request occurs. Due to blocking nature of executing registered action, this solution guarantees required clean-up completion before shutdown.
+
+`IHostApplicationLifetime` interface is not limited to notifying about application lifetime events, but also provides access to `StopApplication()` method which allows you to stop you application gracefully from any place in the code.
+
+
+#### Webhost application
 
 Some example with controller and pending request ??
 
