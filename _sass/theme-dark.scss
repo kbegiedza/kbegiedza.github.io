@@ -83,8 +83,9 @@ a:hover {
 
 .content h1,
 h2,
-h3 {
-    color: $dark-text-color !important;
+h3,
+h4 {
+    color: $dark-text-color  !important;
 }
 
 .content-title {
@@ -162,8 +163,8 @@ h3 {
 
 .article-tag {
     padding: 1em;
-    color: $dark-text-color !important;
-    background-color: $text-accent !important;
+    color: $dark-text-color  !important;
+    background-color: $text-accent  !important;
 }
 
 ::-webkit-scrollbar {
@@ -295,11 +296,11 @@ print {
 }
 
 .accent-text {
-    color: $text-accent !important;
+    color: $text-accent  !important;
 }
 
 .side-panel-header {
-    color: $text-accent !important;
+    color: $text-accent  !important;
 }
 
 a.is-social {

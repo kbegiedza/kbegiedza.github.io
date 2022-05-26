@@ -1,7 +1,7 @@
 .highlighter-rouge {
   padding-top: 1em;
   margin-bottom: 2em;
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
 }
 
 code.highlighter-rouge {
@@ -30,6 +30,14 @@ figure.highlight,
   color: #D4D4D4;
   font-family: $mono-family;
   font-size: 0.9rem;
+}
+
+pre>code:before {
+  opacity: 0.5;
+  display: block;
+  font-size: 1em;
+  text-transform: capitalize;
+  content: "" attr(data-lang);
 }
 
 .highlight pre {
