@@ -185,18 +185,17 @@ info: Sharpbox.Graceful.Services.ImportantService[0]
 `IHostApplicationLifetime` interface is not limited to notifying about application lifetime events, but also provides access to `StopApplication()` method which allows you to stop you application gracefully from any place in the code.
 
 Note that POSIX signals were not fully supported before .NET 6, for instance, to handle `SIGTERM` was used previously mentioned `AppDomain.CurrentDomain.ProcessExit` what could lead to potential [issues](https://github.com/dotnet/runtime/issues/50397) related with usage of `Environment.Exit`.   
-If your application still uses `Environment.Exit` you should probably move to `IHostApplicationLifetime` or stick with attaching to `AppDomain.CurrentDomain.ProcessExit` event.
-Unlike .NET Framwork, modern .NET doesn't have any timeout defined for execution of `ProcessExit` event handlers.
+If your application still uses `Environment.Exit` you should probably try to use `IHostApplicationLifetime` or stick with attaching to `AppDomain.CurrentDomain.ProcessExit` event. Unlike .NET Framework, current versions of .NET doesn't have any timeout defined for execution of `ProcessExit` event handlers.
 
 #### Webhost application
 
 Modern ASP.NET 6 applications uses `IHost` and `IServer` hosting by default which makes use of `IHostApplicationLifetime` pretty straightforward.
-Similar to above `ImportantService` example, you should inject `IHostApplicationLifetime` to your controller (or other service), register to proper callback and execute operations 
+Similar to [above `ImportantService` example](#host-based-console-application), you should inject `IHostApplicationLifetime` to your controller (or other service), register to proper callback and execute operations 
 required for your application to achieve graceful shutdown.
 
-```
-```
+You can find code related with this post on my [C# experiment repository](https://github.com/kbegiedza/Sharpbox/tree/master/src/Sharpbox.Graceful).
 
 ### Further reading
 
 1. [Pod lifecycle](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/)
+2. [Host setup in ASP.NET Core 6.0](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-6.0)
