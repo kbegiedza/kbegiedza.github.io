@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', onContentLoaded);
 
 function onContentLoaded() {
-    const theme = initalizeTheme();
+    const theme = initializeTheme();
 
     updateTheme(theme);
     addThemeToggle();
 
-    fixRougeHightlighter();
+    fixRougeHighlighter();
     addActiveToggleToNavbarBurgers();
 }
 
-function initalizeTheme() {
+function initializeTheme() {
     const theme = localStorage.getItem('theme');
 
     if (theme === null) {
@@ -66,17 +66,21 @@ function addActiveToggleToNavbarBurgers() {
     });
 }
 
-function fixRougeHightlighter() {
+function fixRougeHighlighter() {
     const codeLangKey = 'data-lang';
     const allHighlightedCode = document.getElementsByClassName('highlighter-rouge');
 
     for (var i = 0; i < allHighlightedCode.length; ++i) {
         const highlightedCode = allHighlightedCode[i];
         const codeElements = highlightedCode.getElementsByTagName('code');
-        const langName = highlightedCode.classList[0].replace('language-', '');
 
-        for (var j = 0; j < codeElements.length; ++j) {
-            codeElements[j].setAttribute(codeLangKey, langName);
+        var fullLangName = highlightedCode.classList[0];
+        if (fullLangName.startsWith('language-')) {
+            const langName = fullLangName.replace('language-', '');
+
+            for (var j = 0; j < codeElements.length; ++j) {
+                codeElements[j].setAttribute(codeLangKey, langName);
+            }
         }
     }
 }

@@ -27,7 +27,23 @@
 			"title:",
 			"description:",
 			"categories:",
-			"---"
+			"---",
+			"",
+			"### Abstract",
+			"",
+			"${1}",
+			"",
+			"### Requirements",
+			"",
+			"${2}",
+			"",
+			"### ${3}",
+			"",
+			"${4}",
+			"",
+			"### Further reading",
+			"",
+			"${5}"
 		]
 	}
 }

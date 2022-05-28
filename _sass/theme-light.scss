@@ -86,8 +86,9 @@ body[theme="light"] {
 
     .content h1,
     h2,
-    h3 {
-        color: $light-text-bold-color !important;
+    h3,
+    h4 {
+        color: $light-text-bold-color  !important;
     }
 
     .post-date {
