@@ -26,6 +26,14 @@ First of all you should add [StyleCop.Analyzers](https://github.com/DotNetAnalyz
 }
 ```
 
+Add to csproj
+
+```xml
+<ItemGroup>
+  <AdditionalFiles Include="stylecop.json" />
+</ItemGroup>
+```
+
 Then executing build command should report few code style rule violations
 
 {: .post-image}
