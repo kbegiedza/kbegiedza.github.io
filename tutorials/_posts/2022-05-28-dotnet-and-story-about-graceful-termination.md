@@ -4,7 +4,7 @@ date: "2022-05-28"
 thumbnail: /assets/img/20220528/title-sm.png
 title-image: /assets/img/20220528/title.png
 title: Story about graceful termination with modern .NET
-description: Graceful termination of your .NET application inside pod in Kubernetes environment
+description: Graceful termination of your .NET application inside pod in Kubernetes environment.
 categories: dotnet devops kubernetes
 ---
 
