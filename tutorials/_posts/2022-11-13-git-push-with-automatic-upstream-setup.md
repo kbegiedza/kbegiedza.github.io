@@ -14,7 +14,7 @@ TL;DR ? [Jump to solution](#solution)
 
 I have seen countless times how (not only) junior developers are trying to push their new branch with git CLI typically it would look like this:
 
-Josh stopped codding, test are green, as fast as possible, he is typing `git push` and hits enter.
+Josh stopped coding, test are green, as fast as possible, he is typing `git push` and hits enter.
 Suddenly this message with some magic command occurs:
 
 ```
