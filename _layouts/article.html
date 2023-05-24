@@ -18,9 +18,10 @@ layout: default
 
                     <div class="tags are-medium pt-4">
                         {% for category_name in page.categories %}
-                            <span class="tag article-tag">
-                                <a href="/categories#{{category_name | downcase | slugify: 'latin' }}">{{ category_name }}</a>
-                            </span>
+                        <span class="tag article-tag">
+                            <a href="/categories#{{category_name | downcase | slugify: 'latin' }}">{{ category_name
+                                }}</a>
+                        </span>
                         {% endfor %}
                     </div>
 
