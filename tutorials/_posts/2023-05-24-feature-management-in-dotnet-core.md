@@ -24,6 +24,8 @@ Next step will be adding reference to our package, you can use CLI command `dotn
 
 ### Basic usage
 
+For simplicity in this tutorial we are focusing on using `appsettings.json` but take a note that you can use any `IConfiguration` compatible provider to define feature flags.
+
 As mentioned before we will utilize build-in DI container, so we have to add our feature management to it while configuring services for host:
 
 ```c#
@@ -32,7 +34,7 @@ var host = Host.CreateDefaultBuilder(args)
                {
                    services.AddHostedService<Worker>();
 
-                   services.AddFeatureManagement()
+                   services.AddFeatureManagement();
                })
                .Build();
 ```
@@ -97,9 +99,9 @@ Remember that we should always plan ahead lifetime of our feature flags and remo
 
 ### Usage in ASP.NET Core
 
-To utilize full potential of feature management in ASP.NET Core we have to add separate [Microsoft.FeatureManagement.AspNetCore](https://www.nuget.org/packages/Microsoft.FeatureManagement.AspNetCore/) NuGet package with `dotnet add package Microsoft.FeatureManagement`.
+To utilize full potential of feature management in ASP.NET Core we have to add separate NuGet package [Microsoft.FeatureManagement.AspNetCore](https://www.nuget.org/packages/Microsoft.FeatureManagement.AspNetCore/) with `dotnet add package Microsoft.FeatureManagement`.
 
-After adding package we can easily conditionally enable selected Controllers with `FeatureGate` attribute:
+After installing we can easily enable or disable selected Controllers using `FeatureGate` attribute and good old `appsettings.json`:
 
 ```c#
 [FeatureGate(FeatureFlags.ExperimentalAlgorithm)]
@@ -111,13 +113,41 @@ public class ExperimentalController()
 
 ### Filters
 
-### Optional Controller with feature toggles
+Our library have bundled one more powerful feature which is extendable filtering. We can make use of multiple predefined filters such as `TimeWindowFilter` to limit availability of selected features based on defined time window (or enable new feature after concrete date by not defining `End` parameter).
 
-<!-- Swagger filter Code -->
+To use filtering we have to register proper filter in our DI container:
 
-### Azure App Configuration
+```c#
+var host = Host.CreateDefaultBuilder(args)
+               .ConfigureServices(services =>
+               {
+                   services.AddHostedService<Worker>();
 
-### Caching and snapshots
+                   services.AddFeatureManagement()
+                           // register TimeWindowFilter
+                           .AddFeatureFilter<TimeWindowFilter>();
+               })
+               .Build();
+```
+
+And configure it's parameters in our `appsettings.json`:
+
+```json
+"FeatureManagement": {
+    "ExperimentalAlgorithm": {
+        "EnabledFor": [
+            {
+                "Name": "Microsoft.TimeWindow",
+                "Parameters": {
+                    "Start": "Wed, 24 May 2023 17:00:00 UTC",
+                }
+            }
+        ]
+    }
+}
+```
 
 ### Further reading
-
+1. [API Reference](https://learn.microsoft.com/en-us/dotnet/api/microsoft.featuremanagement)
+2. [Feature filters](https://learn.microsoft.com/en-us/dotnet/api/microsoft.featuremanagement.featurefilters)
+3. [Library repository](https://github.com/microsoft/FeatureManagement-Dotnet)
