@@ -6,4 +6,4 @@ RUN mkdir -p _site .jekyll-cache /project
 
 WORKDIR /project
 
-CMD ["jekyll", "serve", "--watch"]
+CMD ["jekyll", "serve", "--watch", "--force_polling", "--livereload"]
