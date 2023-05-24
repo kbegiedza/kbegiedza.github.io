@@ -70,7 +70,7 @@ In the example above, we are using the `async` keyword to avoid blocking and wai
 
 Finally, let's add the following JSON snippet to `appsettings.json` and give it a spin:
 
-```json
+```jsonc
 {
     // ...
     "FeatureManagement": {
