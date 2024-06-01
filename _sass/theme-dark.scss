@@ -85,7 +85,7 @@ a:hover {
 h2,
 h3,
 h4 {
-    color: $dark-text-color  !important;
+    color: $dark-text-color !important;
 }
 
 .content-title {
@@ -163,8 +163,8 @@ h4 {
 
 .article-tag {
     padding: 1em;
-    color: $dark-text-color  !important;
-    background-color: $text-accent  !important;
+    color: $dark-text-color !important;
+    background-color: $text-accent !important;
 }
 
 ::-webkit-scrollbar {
@@ -285,22 +285,20 @@ print {
 
 @media (hover: hover) {
     .side-about-img-overlay {
-        opacity: 0.4;
-        transition: opacity ease 1s;
+        opacity: 0.95;
     }
 
     .side-about-img-overlay:hover {
-        opacity: 0.9;
-        transition: opacity ease 1s;
+        opacity: 1;
     }
 }
 
 .accent-text {
-    color: $text-accent  !important;
+    color: $text-accent !important;
 }
 
 .side-panel-header {
-    color: $text-accent  !important;
+    color: $text-accent !important;
 }
 
 a.is-social {
