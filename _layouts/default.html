@@ -8,7 +8,7 @@
         {% if page.title %}
         {{ page.title }}
         {% else %}
-        {{ site.title }}
+        Krzysztof Begiedza - Blog
         {% endif %}
     </title>
 
@@ -33,7 +33,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />
+    <meta property="og:image" content="{{ site.url }}{{ page.thumbnail }}" />
     <meta property="og:site_name" content="Krzysztof Begiedza - Blog">
     <meta property="article:publisher" content="https://www.instagram.com/kbegiedza" />
     <meta property="article:author" content="https://www.instagram.com/kbegiedza" />
